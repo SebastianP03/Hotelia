@@ -456,7 +456,7 @@ $ModeloHotel=new Hotel();
                                                         <ul class="dropdown-menu pull-left" role="menu">
                                                             <li>
                                                                 <a href="javascript:;">
-                                                                    <i class="material-icons">create</i> Editar </a>
+                                                                    <i class="material-icons">create </i> Editar </a>
                                                             </li>
                                                             <li>
                                                                 <a href="../Habitacion/habitacion.php">
