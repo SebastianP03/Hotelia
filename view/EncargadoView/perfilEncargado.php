@@ -35,8 +35,7 @@ $ModeloEncargado->validateSession();
 		<link rel="shortcut icon" href="../../asset/images/LogoSolo.png">
 </head>
 
-<body
-	class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
 	<div class="page-wrapper">
 		<!-- start header -->
 		<div class="page-header navbar navbar-fixed-top">
@@ -48,19 +47,7 @@ $ModeloEncargado->validateSession();
 				    </a>
 				</div>
 				<!-- logo end -->
-				<ul class="nav navbar-nav navbar-left in">
-					<li><a href="#" class="menu-toggler sidebar-toggler"><i class="icon-menu"></i></a></li>
-				</ul>
-				<form class="search-form-opened" action="#" method="GET">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search..." name="query">
-						<span class="input-group-btn search-btn">
-							<a href="javascript:;" class="btn submit">
-								<i class="icon-magnifier"></i>
-							</a>
-						</span>
-					</div>
-				</form>
+				
 				<!-- start mobile menu -->
 				<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
 					data-target=".navbar-collapse">
@@ -320,33 +307,21 @@ $ModeloEncargado->validateSession();
 								</div>
 							</li>
 							
-							<li class="nav-item start active">
-								<a href="../EncargadoView/indexEncargado.php" class="nav-link nav-toggle">
-									<i class="material-icons">dashboard</i>
-									<span class="title">Menu principal</span>
-								</a>
-							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link nav-toggle">
-									<i class="material-icons">email</i>
-									<span class="title">Correo</span>
+								<a href="" class="nav-link nav-toggle">
+									<i class="material-icons">dashboard</i>
+									<span class="title">Menú Principal</span>
 									<span class="arrow"></span>
-									<span class="label label-rouded label-menu label-danger">new</span>
 								</a>
 								<ul class="sub-menu">
 									<li class="nav-item">
-										<a href="email_inbox.html" class="nav-link ">
-											<span class="title">escribir correo</span>
+										<a href="../EncargadoView/indexEncargado.php" class="nav-link ">
+											<span class="title">Menú Principal</span>
 										</a>
 									</li>
 									<li class="nav-item">
-										<a href="email_view.html" class="nav-link ">
-											<span class="title">bandeja de entrada</span>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="email_compose.html" class="nav-link ">
-											<span class="title"></span>
+										<a href="../EncargadoView/perfilEncargado.php" class="nav-link ">
+											<span class="title">Mi Perfil</span>
 										</a>
 									</li>
 								</ul>
@@ -373,6 +348,7 @@ $ModeloEncargado->validateSession();
 									</li>
 								</ul>
 							</li>
+							
 							
 							
 
@@ -887,13 +863,12 @@ $ModeloEncargado->validateSession();
 			<!-- end page container -->
 			<!-- start footer -->
 			<div class="page-footer">
-				<div class="page-footer-inner"> 2018 &copy; Spice Hotel Template By
-					<a href="mailto:redstartheme@gmail.com" target="_top" class="makerCss">RedStar Theme</a>
-				</div>
-				<div class="scroll-to-top">
-					<i class="icon-arrow-up"></i>
-				</div>
+			<div class="page-footer-inner"> 2021 &copy; Hotelia
 			</div>
+			<div class="scroll-to-top">
+				<i class="icon-arrow-up"></i>
+			</div>
+		</div>
 			<!-- end footer -->
 		</div>
 	</div>
