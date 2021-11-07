@@ -33,11 +33,11 @@ $cliente=$model->tipoDoc();
           </div>
         </div>    
         <div class="frontbox">
-          <form action="../controller/encargadoController.php" method="POST" autocomplete="off">
+          <form action="../../controller/encargadoController.php" method="POST" autocomplete="off">
           <div class="encargado">
             <h2>Encargado</h2>
             <div class="inputbox">
-              <input type="text" class="name" name="nomEnc" placeholder="Nombres" required/>
+              <input type="text" class="name" name="NomEnc" placeholder="Nombres" required/>
               <input type="text" class="lastname" name="ApeEnc" placeholder="Apellidos" required/>
               <select name="TipoDoc">
                 <option value="1">C.C</option>
@@ -51,7 +51,7 @@ $cliente=$model->tipoDoc();
               <input class="password" type="password" name="ConEnc" placeholder="Contraseña" required/>
               <i class="show fas fa-eye"></i>
               <i class="hide fas fa-eye-slash"></i>
-              <button><b>Registrarse</b></button>
+              <button name="AccionB" value="Registrarse"><b>Registrarse</b></button>
           </div>
         </form>
         </div>

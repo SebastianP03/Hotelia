@@ -28,7 +28,21 @@
         $ModeloHotel->update($IdHot,$NomHot,$DirHot,$DesHot,$ImaHot,$EstHot,$IdEnc);
     }
 
-
+    if ($accion == "EstadoA") {
+        $ModeloHotel=new Hotel();
+        $IdHot=$_POST['IdHot'];
+        $IdEnc=$_POST['IdEnc'];
+        
+        $ModeloHotel->ActHot($IdHot,$IdEnc);
+    }
+    
+    if ($accion == "EstadoC") {
+        $ModeloHotel=new Hotel();
+        $IdHot=$_POST['IdHot'];
+        $IdEnc=$_POST['IdEnc'];
+        
+        $ModeloHotel->DesActHot($IdHot,$IdEnc);
+    }
 
 
 

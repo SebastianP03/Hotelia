@@ -295,7 +295,7 @@ $ModeloHotel=new Hotel();
 										<div class="profile-usertitle-job"> Encargado </div>
 									</div>
 									<div class="sidebar-userpic-btn">
-										<a class="tooltips" href="perfilEncargado.php" data-placement="top"
+										<a class="tooltips" href="../EncargadoView/perfilEncargado.php" data-placement="top"
 											data-original-title="Perfil">
 											<i class="material-icons">person_outline</i>
 										</a>
@@ -395,9 +395,11 @@ $ModeloHotel=new Hotel();
                                     <div class="row p-b-20">
                                         <div class="col-md-6 col-sm-6 col-6">
                                             <div class="btn-group">
-                                                <button id="addRow1" class="btn btn-info">
-                                                    Registrar Nuevo Hotel <i class="fa fa-plus"></i>
-                                                </button>
+                                                <a href="signupHotel.php">
+                                                    <button id="addRow1" class="btn btn-info">
+                                                        Registrar Nuevo Hotel <i class="fa fa-plus"></i>
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                         
@@ -455,7 +457,7 @@ $ModeloHotel=new Hotel();
                                                         </button>
                                                         <ul class="dropdown-menu pull-left" role="menu">
                                                             <li>
-                                                                <a href="javascript:;">
+                                                                <a href="Actualizar.php">
                                                                     <i class="material-icons">create </i> Editar </a>
                                                             </li>
                                                             <li>
@@ -463,11 +465,36 @@ $ModeloHotel=new Hotel();
                                                                     <i class="material-icons">hotel</i> Habitaciones </a>
                                                             </li>
                                                             <li>
-                                                                <a href="">
-                                                                    <i class="material-icons">lock</i> Cambiar Estado </a>
+                                                                <form action="../../controller/hotelController.php" method="POST">
+                                                                        <input type="hidden" name="IdEnc" value="$_SESSION['ID']">
+                                                                        <input type="hidden" name="IdHot" value="$_SESSION['HOTEL']">
+                                                                        <i class="material-icons">lock</i>
+                                                                        <input type="submit" value="EstadoC" name="AccionB"> Cerrar Hotel
+                                                                 </form>
                                                             </li>
-                                                            <li class="divider"> </li>
-                                                            
+                                                            <li><!-- -->
+                                                                <?php 
+                                                                    if ($Hot['Estado'] == 0) {
+                                                                ?>    
+                                                                        <form action="../../controller/hotelController.php" method="POST">
+                                                                        <input type="hidden" name="IdEnc" value="$_SESSION['ID']">
+                                                                        <input type="hidden" name="IdHot" value="$_SESSION['HOTEL']">
+                                                                        <i class="material-icons">lock</i>
+                                                                        <input type="submit" value="EstadoA" name="AccionB"> Abrir Hotel
+                                                                        </form>
+                                                                <?php 
+                                                                    }else if ($Hot['Estado'] == 1) {
+                                                                ?>
+                                                                        <form action="../../controller/hotelController.php" method="POST">
+                                                                        <input type="hidden" name="IdEnc" value="$_SESSION['ID']">
+                                                                        <input type="hidden" name="IdHot" value="$_SESSION['HOTEL']">
+                                                                        <i class="material-icons">lock</i>
+                                                                        <input type="submit" value="EstadoC" name="AccionB"> Cerrar Hotel
+                                                                        </form>
+                                                                <?php       
+                                                                    }
+                                                                ?>
+                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </td>

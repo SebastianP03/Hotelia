@@ -176,3 +176,8 @@ alter table Habitacion_Caracteristicas
 add foreign key (Id_Caracteristicas) references Caracteristicas(Id_Caracteristicas),
 add foreign key (Id_Habitacion) references Habitacion(Id_Habitacion);
 
+-- ******************************************** --
+use siproyectohoteles;
+
+alter table encargado
+add Foto_Encargado longblob not null;

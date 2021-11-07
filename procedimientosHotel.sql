@@ -36,11 +36,15 @@
     create procedure proUpdateEnc(in IdEnc int,in NomEnc varchar (80), in ApeEnc varchar (80), in TelEnc varchar (10),CorEnc varchar(50),ConEnc varchar (30))
     begin
     update Encargado 
-	set Nombres_Encargado=NomEnc,Apellidos_Encargado=ApeEnc,Telefono_Encargado=TelEnc,Correo_Encargado=CorEnc,Contraseña_Encargado=ConEnc
+	set Nombres_Encargado=NomEnc, Apellidos_Encargado=ApeEnc, Telefono_Encargado=TelEnc, Correo_Encargado=CorEnc, Contraseña_Encargado=ConEnc
 	where Id_Encargado=IdEnc;
     end //
     delimiter ;
     
+    call proUpdateEnc("1","steven andres","Castillo Barrera","3107853605","sacastillo889@misena.edu.co","clavesecreta");
+    
+    drop trigger ValidarcamposVacios;
+
 -- hotel **************************************************************************
 -- infoHotel
 	delimiter //
@@ -73,15 +77,40 @@
     delimiter ;
     
 -- estado inactivo
-/*	delimiter //
-    create procedure proCambioInactivoHot(in IdHot int)
+	delimiter //
+    create procedure proCambioInactivoHot(in IdHot int, in IdEnc int)
     begin
     update Hotel
-	set Hotel = 0
-    where Id_Hotel = IdHot;
+	set Estado = 0
+    where Id_Hotel = IdHot and Id_Encargado = IdEnc;
     end //
     delimiter ;
-drop procedure proCambioInactivoHot;*/
+    
+    call proCambioInactivoHot (2,1);
+    call proCambioActivoHot (2,1);
+    
+-- estado activo
+    delimiter //
+    create procedure proCambioActivoHot(in IdHot int, in IdEnc int)
+    begin
+    update Hotel
+	set Estado = 1
+    where Id_Hotel = IdHot and Id_Encargado = IdEnc;
+    end //
+    delimiter ;
+    
+    
+-- Cambio de foto Encargado 
+	delimiter //
+    create procedure proCambioFotoEnc(in IdEnc int, in FotoEnc longblob)
+    begin
+    update Encargado
+    set Foto_Encargado = FotoEnc
+    where Id_Encargado = IdEnc;
+    end //
+    delimiter ;
+	
+ drop procedure proCambioFoto;
 -- habitacion **************************************************************************
 
 delimiter //

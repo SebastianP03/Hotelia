@@ -28,7 +28,7 @@
             header('Location:../view/EncargadoView/indexEncargado.php');
         }
         else{
-            header('Location:../view/login.php?error=1');
+            header('Location:../index.php');
         }
     }
 
@@ -50,5 +50,12 @@
         $salir->signOut();
     }
 
+    if ($accion=="Foto") {
+        $ModeloEncargado= new Encargado();
+        $IdEnc=$_POST['IdEnc'];
+        $FotoEnc=$_POST['FotoEnc'];
+
+        $ModeloEncargado->CambioFoto($IdEnc,$FotoEnc);
+    }
 
 ?>

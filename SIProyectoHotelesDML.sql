@@ -7,13 +7,17 @@ insert into TipoDocumento (Tipo_Documento) values ('Pasaporte');
 -- 
 insert into Encargado (Nombres_Encargado,Apellidos_Encargado,FechaNac_Encargado,Telefono_Encargado,Numero_Documento_Encargado,Correo_Encargado,Contraseña_Encargado,Id_TipoDocumento)
 	values ('steven', 'castillo', '2000-08-18', '3107853605', '1000161988', 'sacastillo889@misena.edu.co','clavesecreta',1);
+    
+insert into Encargado (Nombres_Encargado,Apellidos_Encargado,FechaNac_Encargado,Telefono_Encargado,Numero_Documento_Encargado,Correo_Encargado,Contraseña_Encargado,Id_TipoDocumento)
+	values ('pruebas', 'Encargado', '2000-08-18', '3104853605', '1000162988', 'prueba@gmail.com','clavesecreta',1);
 	
+delete from encargado where Id_Encargado = 4;
 --
 use siproyectohoteles;
 select * from	encargado;
 select * from habitacion;
 select * from cliente;
-select * from hotel;
+select * from hotel where Id_Hotel = 2;
 select * from tipoDocumento;
 select * from Encargado where Correo_Encargado= 'sacastillo889@misena.edu.co' and Id_Encargado = 3;
 -- delete from Encargado where Id_Encargado=2;
@@ -51,3 +55,15 @@ select
 	inner join TipoDocumento as tipD
 	on enc.Id_TipoDocumento= tipD.Id_TipoDocumento
 	where enc.id_Encargado = idEnc;
+
+
+-- 
+select * from hotel;
+
+update hotel
+set Nombre_Hotel ="hotel mio", Direccion_Hotel="",Descripcion_Hotel=""
+where Id_Hotel = 2;
+
+
+
+

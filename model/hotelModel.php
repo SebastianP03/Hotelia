@@ -35,7 +35,7 @@ class Hotel extends Conexion{
     }
 
     public function update($IdHot,$NomHot,$DirHot,$DesHot,$ImaHot,$EstHot,$IdEnc){
-        $statement=$this->db->prepare('CALL proUpdateHot(:IdHot,:NomHot,:DirHot,:DesHot,:ImaHot,:EstHot,:IdEnc)');
+            $statement=$this->db->prepare('CALL proUpdateHot(:IdHot,:NomHot,:DirHot,:DesHot,:ImaHot,:EstHot,:IdEnc)');
             $statement->bindparam(':IdHot',$IdHot);
             $statement->bindparam(':NomHot',$NomHot);
             $statement->bindparam(':DirHot',$DirHot);
@@ -47,7 +47,6 @@ class Hotel extends Conexion{
             header('Location:../view/HotelView/apartadoHotel.php');
         }else{
             header('Location:../view/HotelView/apartadoHotel.php');
-
         }
 
     }
@@ -67,23 +66,39 @@ class Hotel extends Conexion{
 
 // *************
 
-public function listarHot(){
-    $rows=null;
-    $statement=$this->db->prepare("SELECT Imagen_Hotel, Nombre_Hotel, Direccion_Hotel, Descripcion_Hotel FROM hotel;");
-    $statement->execute();
-    while ($result=$statement->fetch()) {
-        $rows[]=$result;
+    public function listarHot(){
+        $rows=null;
+        $statement=$this->db->prepare("SELECT Imagen_Hotel, Nombre_Hotel, Direccion_Hotel, Descripcion_Hotel FROM hotel;");
+        $statement->execute();
+        while ($result=$statement->fetch()) {
+            $rows[]=$result;
+        }
+        return $rows;
     }
-    return $rows;
-}
 
+    public function ActHot(){
+        $statement=$this->db->prepare('CALL proCambioActivoHot (:IdHot, :IdEnc);');
+        $statement->bindparam(':IdHot',$IdHot);
+        $statement->bindparam(':IdEnc',$IdEnc);
 
+        if ($statement->execute()) {
+            header('Location:../view/HotelView/apartadoHotel.php');
+        }else{
+            header('Location:../view/HotelView/apartadoHotel.php');
+        }
+    }
 
+    public function DesActHot(){
+        $statement=$this->db->prepare('CALL proCambioInactivoHot (:IdHot, :IdEnc);');
+        $statement->bindparam(':IdHot',$IdHot);
+        $statement->bindparam(':IdEnc',$IdEnc);
 
-
-
-
-
+        if ($statement->execute()) {
+            header('Location:../view/HotelView/apartadoHotel.php');
+        }else{
+            header('Location:../view/HotelView/apartadoHotel.php');
+        }
+    }
 
 
 

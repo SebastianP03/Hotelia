@@ -27,7 +27,7 @@ class Encargado extends Conexion{
     
     public function validateSession(){
         if ($_SESSION['ID']==null) {
-            header('Location:index.php');
+            header('Location:../../index.php');
         }
     }
 
@@ -49,10 +49,10 @@ class Encargado extends Conexion{
             }
     }
 
-    public function getIdEnc($idEnc){
+    public function getIdEnc($IdEnc){
         $rows=null;
-        $statement=$this->db->prepare('CALL proInfoEnc(:idEnc);');
-        $statement->bindparam(':idEnc',$idEnc);
+        $statement=$this->db->prepare('CALL proInfoEnc(:IdEnc);');
+        $statement->bindparam(':IdEnc',$IdEnc);
         $statement->execute();
         while ($result=$statement->fetch()) {
             $rows[]=$result;
@@ -72,16 +72,26 @@ class Encargado extends Conexion{
             if($statement->execute()){
                 header('Location:../view/EncargadoView/perfilEncargado.php');
             }else{
-                header('Location:../view/EncargadoView/perfilEncargado.php');
+                header('Location:../view/EncargadoView/indexEncargado.php');
             }
     }
 
     public function signOut(){
         session_unset();
         session_destroy();
-        header('Location:index.php');
+        header('Location:../index.php');
     }
 
+    public function CambioFoto($IdEnc,$FotoEnc){
+        $statement=$this->db->prepare('CALL proCambioFotoEnc(:IdEnc,:FotoEnc);');
+            $statement->bindparam(':IdEnc',$IdEnc);
+            $statement->bindparam(':FotoEnc',$FotoEnc);
+            if($statement->execute()){
+                header('Location:../view/EncargadoView/perfilEncargado.php');
+            }else{
+                header('Location:../view/EncargadoView/indexEncargado.php');
+            }
+    }
 
 }
 ?>

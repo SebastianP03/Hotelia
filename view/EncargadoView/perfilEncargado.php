@@ -3,6 +3,7 @@ require_once('../../model/encargadoModel.php');
 $ModeloEncargado= new Encargado();
 $ModeloEncargado->validateSession();
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -38,8 +39,8 @@ $ModeloEncargado->validateSession();
 <body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
 	<div class="page-wrapper">
 		<!-- start header -->
-		<div class="page-header navbar navbar-fixed-top">
-			<div class="page-header-inner ">
+		<div class="page-header navbar navbar-fixed-top" >
+			<div class="page-header-inner " >
 				<!-- logo start -->
 				<div class="page-logo">
 					<a href="../EncargadoView/indexEncargado.php">
@@ -62,71 +63,13 @@ $ModeloEncargado->validateSession();
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
 								data-close-others="true">
 								<i class="fa fa-bell-o"></i>
-								<span class="badge headerBadgeColor1"> 6 </span>
 							</a>
 							<ul class="dropdown-menu animated swing">
 								<li class="external">
-									<h3><span class="bold">Notifications</span></h3>
-									<span class="notification-label purple-bgcolor">New 6</span>
+									<h3><span class="bold">Notificaciones</span></h3>
+									
 								</li>
-								<li>
-									<ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
-										<li>
-											<a href="javascript:;">
-												<span class="time">just now</span>
-												<span class="details">
-													<span class="notification-icon circle deepPink-bgcolor"><i
-															class="fa fa-check"></i></span> Congratulations!. </span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;">
-												<span class="time">3 mins</span>
-												<span class="details">
-													<span class="notification-icon circle purple-bgcolor"><i
-															class="fa fa-user o"></i></span>
-													<b>John Micle </b>is now following you. </span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;">
-												<span class="time">7 mins</span>
-												<span class="details">
-													<span class="notification-icon circle blue-bgcolor"><i
-															class="fa fa-comments-o"></i></span>
-													<b>Sneha Jogi </b>sent you a message. </span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;">
-												<span class="time">12 mins</span>
-												<span class="details">
-													<span class="notification-icon circle pink"><i
-															class="fa fa-heart"></i></span>
-													<b>Ravi Patel </b>like your photo. </span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;">
-												<span class="time">15 mins</span>
-												<span class="details">
-													<span class="notification-icon circle yellow"><i
-															class="fa fa-warning"></i></span> Warning! </span>
-											</a>
-										</li>
-										<li>
-											<a href="javascript:;">
-												<span class="time">10 hrs</span>
-												<span class="details">
-													<span class="notification-icon circle red"><i
-															class="fa fa-times"></i></span> Application error. </span>
-											</a>
-										</li>
-									</ul>
-									<div class="dropdown-menu-footer">
-										<a href="javascript:void(0)"> All notifications </a>
-									</div>
-								</li>
+								
 							</ul>
 						</li>
 						<!-- end notification dropdown -->
@@ -135,82 +78,7 @@ $ModeloEncargado->validateSession();
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
 								data-close-others="true">
 								<i class="fa fa-envelope-o"></i>
-								<span class="badge headerBadgeColor2"> 2 </span>
 							</a>
-							<ul class="dropdown-menu animated slideInDown">
-								<li class="external">
-									<h3><span class="bold">Messages</span></h3>
-									<span class="notification-label cyan-bgcolor">New 2</span>
-								</li>
-								<li>
-									<ul class="dropdown-menu-list small-slimscroll-style" data-handle-color="#637283">
-										<li>
-											<a href="#">
-												<span class="photo">
-													<img src="../../assets/img/user/user2.jpg" class="img-circle" alt="">
-												</span>
-												<span class="subject">
-													<span class="from"> Sarah Smith </span>
-													<span class="time">Just Now </span>
-												</span>
-												<span class="message"> Jatin I found you on LinkedIn... </span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="photo">
-													<img src="../../assets/img/user/user3.jpg" class="img-circle" alt="">
-												</span>
-												<span class="subject">
-													<span class="from"> John Deo </span>
-													<span class="time">16 mins </span>
-												</span>
-												<span class="message"> Fwd: Important Notice Regarding Your Domain
-													Name... </span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="photo">
-													<img src="../../assets/img/user/user1.jpg" class="img-circle" alt="">
-												</span>
-												<span class="subject">
-													<span class="from"> Rajesh </span>
-													<span class="time">2 hrs </span>
-												</span>
-												<span class="message"> pls take a print of attachments. </span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="photo">
-													<img src="../../assets/img/user/user8.jpg" class="img-circle" alt="">
-												</span>
-												<span class="subject">
-													<span class="from"> Lina Smith </span>
-													<span class="time">40 mins </span>
-												</span>
-												<span class="message"> Apply for Ortho Surgeon </span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="photo">
-													<img src="../../assets/img/user/user5.jpg" class="img-circle" alt="">
-												</span>
-												<span class="subject">
-													<span class="from"> Jacob Ryan </span>
-													<span class="time">46 mins </span>
-												</span>
-												<span class="message"> Request for leave application. </span>
-											</a>
-										</li>
-									</ul>
-									<div class="dropdown-menu-footer">
-										<a href="#"> All Messages </a>
-									</div>
-								</li>
-							</ul>
 						</li>
 						<!-- end message dropdown -->
 						<!-- start manage user dropdown -->
@@ -277,10 +145,10 @@ $ModeloEncargado->validateSession();
 								<div class="user-panel">
 									<div class="row">
 										<div class="sidebar-userpic">
-											<img src="../../assets/img/sdp.jpg" class="img-responsive" alt=""> </div>
+											<img src="aqui" class="img-responsive" alt=""> </div>
 									</div>
 									<div class="profile-usertitle">
-										<div class="sidebar-userpic-name">     <?php echo "$_SESSION[NOMBRES]" ." ". $_SESSION['APELLIDOS']; ?><br>
+										<div class="sidebar-userpic-name">     <?php echo $_SESSION['NOMBRES'] ." ". $_SESSION['APELLIDOS']; ?><br>
 									</div>
 										<div class="profile-usertitle-job"> Encargado </div>
 									</div>
@@ -348,12 +216,6 @@ $ModeloEncargado->validateSession();
 									</li>
 								</ul>
 							</li>
-							
-							
-							
-
-							
-							
 						</ul>
 					</div>
 				</div>
@@ -383,30 +245,19 @@ $ModeloEncargado->validateSession();
 									<div class="card-body no-padding height-9">
 										<div class="row">
 											<div class="profile-userpic">
-												<img src="../../assets/img/dp.jpg" class="img-responsive" alt=""> </div>
+												
+											</div>
 										</div>
 										<div class="profile-usertitle">
-											<div class="profile-usertitle-name"> John Deo </div>
-											<div class="profile-usertitle-job"> Jr. Professor </div>
+											<div class="profile-usertitle-name"> <?php echo $_SESSION['NOMBRES'] .' '. $_SESSION['APELLIDOS'] ?> </div>
 										</div>
-										<ul class="list-group list-group-unbordered">
-											<li class="list-group-item">
-												<b>Followers</b> <a class="pull-right">1,200</a>
-											</li>
-											<li class="list-group-item">
-												<b>Following</b> <a class="pull-right">750</a>
-											</li>
-											<li class="list-group-item">
-												<b>Friends</b> <a class="pull-right">11,172</a>
-											</li>
-										</ul>
 										<!-- END SIDEBAR USER TITLE -->
 										<!-- SIDEBAR BUTTONS -->
 										<div class="profile-userbuttons">
-											<button type="button"
-												class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-primary">Follow</button>
-											<button type="button"
-												class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-pink">Message</button>
+											<form action="../../controller/encargadoController.php" method="POST">
+												<input type="file" name="FotEnc">
+												<button type="submit" name="AccionB" value="Foto" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-primary">Cambiar Foto</button>
+											</form>
 										</div>
 										<!-- END SIDEBAR BUTTONS -->
 									</div>
@@ -444,6 +295,9 @@ $ModeloEncargado->validateSession();
                                                             <form action="../../controller/encargadoController.php" method="POST">
 															<div class="col-md-6 col-sm-6">
 																<div class="form-group">
+																	<img src="<?php echo $Enc['Foto_Encargado'] ?>">
+																	<?php echo '<img src=" $Enc["Foto_Encargado"] ">'?>
+																	<input type="hidden" name="IdEnc" value="<?php echo $_SESSION['ID']?>">
                                                                 <label>Nombres</label>
                                                                     <input type="text" class="form-control" name="NomEnc" value="<?php echo $Enc['Nombres_Encargado']?>">
 																</div>
@@ -453,29 +307,29 @@ $ModeloEncargado->validateSession();
                                                             	</div>
 																<div class="form-group">
 																	<label>Tipo Documento</label>
-																	<input type="text" class="form-control" value="<?php echo $Enc['Tipo_Documento']?>" >
+																	<input type="text" class="form-control" value="<?php echo $Enc['Tipo_Documento']?>" readonly>
 																</div>
 																<div class="form-group">
 																	<label>Numero de Documento</label>
-																	<input type="text" class="form-control" value="<?php echo $Enc['Numero_Documento_Encargado']?>" >
+																	<input type="text" class="form-control" value="<?php echo $Enc['Numero_Documento_Encargado']?>" readonly>
 																</div>
 															</div>
 															<div class="col-md-6 col-sm-6">
 																<div class="form-group">
 																	<label>Fecha de Nacimiento</label>
-																	<input type="text" class="form-control" value="<?php echo $Enc['FechaNac_Encargado']?>" >
+																	<input type="text" class="form-control" value="<?php echo $Enc['FechaNac_Encargado']?>" readonly>
 																</div>
 																<div class="form-group">
 																	<label>Telefono Celular</label>
-																	<input type="text" class="form-control" value="<?php echo $Enc['Telefono_Encargado']?>" >
+																	<input type="text" class="form-control" name="TelEnc" value="<?php echo $Enc['Telefono_Encargado']?>" >
 																</div>
 																<div class="form-group">
 																	<label>Correo</label>
-																	<input type="text" class="form-control" value="<?php echo $Enc['Correo_Encargado']?>" >
+																	<input type="text" class="form-control" name="CorEnc" value="<?php echo $Enc['Correo_Encargado']?>" >
 																</div>
 																<div class="form-group">
 																	<label>Contraseña</label>
-																	<input type="text" class="form-control" value="<?php echo $Enc['Contraseña_Encargado']?>" >
+																	<input type="text" class="form-control" name="ConEnc" value="<?php echo $Enc['Contraseña_Encargado']?>" >
 																</div>
 															</div>
 																<button type="submit" class="btn btn-primary" name="AccionB" value="Actualizar">Actualizar</button>
@@ -498,366 +352,7 @@ $ModeloEncargado->validateSession();
 				</div>
 				<!-- end page content -->
 				<!-- start chat sidebar -->
-				<div class="chat-sidebar-container" data-close-on-body-click="false">
-					<div class="chat-sidebar">
-						<ul class="nav nav-tabs">
-							<li class="nav-item">
-								<a href="#quick_sidebar_tab_1" class="nav-link active tab-icon" data-toggle="tab">Theme
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#quick_sidebar_tab_2" class="nav-link tab-icon" data-toggle="tab"> Chat
-								</a>
-							</li>
-							<li class="nav-item">
-								<a href="#quick_sidebar_tab_3" class="nav-link tab-icon" data-toggle="tab"> Settings
-								</a>
-							</li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane chat-sidebar-settings in show active animated shake" role="tabpanel"
-								id="quick_sidebar_tab_1">
-								<div class="slimscroll-style">
-									<div class="theme-light-dark">
-										<h6>Sidebar Theme</h6>
-										<button type="button" data-theme="white"
-											class="btn lightColor btn-outline btn-circle m-b-10 theme-button">Light
-											Sidebar</button>
-										<button type="button" data-theme="dark"
-											class="btn dark btn-outline btn-circle m-b-10 theme-button">Dark
-											Sidebar</button>
-									</div>
-									<div class="theme-light-dark">
-										<h6>Sidebar Color</h6>
-										<ul class="list-unstyled">
-											<li class="complete">
-												<div class="theme-color sidebar-theme">
-													<a href="#" data-theme="white"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="dark"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="blue"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="indigo"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="cyan"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="green"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="red"><span class="head"></span><span
-															class="cont"></span></a>
-												</div>
-											</li>
-										</ul>
-										<h6>Header Brand color</h6>
-										<ul class="list-unstyled">
-											<li class="theme-option">
-												<div class="theme-color logo-theme">
-													<a href="#" data-theme="logo-white"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="logo-dark"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="logo-blue"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="logo-indigo"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="logo-cyan"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="logo-green"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="logo-red"><span class="head"></span><span
-															class="cont"></span></a>
-												</div>
-											</li>
-										</ul>
-										<h6>Header color</h6>
-										<ul class="list-unstyled">
-											<li class="theme-option">
-												<div class="theme-color header-theme">
-													<a href="#" data-theme="header-white"><span
-															class="head"></span><span class="cont"></span></a>
-													<a href="#" data-theme="header-dark"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="header-blue"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="header-indigo"><span
-															class="head"></span><span class="cont"></span></a>
-													<a href="#" data-theme="header-cyan"><span class="head"></span><span
-															class="cont"></span></a>
-													<a href="#" data-theme="header-green"><span
-															class="head"></span><span class="cont"></span></a>
-													<a href="#" data-theme="header-red"><span class="head"></span><span
-															class="cont"></span></a>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- Start Doctor Chat -->
-							<div class="tab-pane chat-sidebar-chat animated slideInRight" id="quick_sidebar_tab_2">
-								<div class="chat-sidebar-list">
-									<div class="chat-sidebar-chat-users slimscroll-style" data-rail-color="#ddd"
-										data-wrapper-class="chat-sidebar-list">
-										<div class="chat-header">
-											<h5 class="list-heading">Online</h5>
-										</div>
-										<ul class="media-list list-items">
-											<li class="media"><img class="media-object" src="../../assets/img/user/user3.jpg"
-													width="35" height="35" alt="...">
-												<i class="online dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">John Deo</h5>
-													<div class="media-heading-sub">Spine Surgeon</div>
-												</div>
-											</li>
-											<li class="media">
-												<div class="media-status">
-													<span class="badge badge-success">5</span>
-												</div> <img class="media-object" src="../../assets/img/user/user1.jpg"
-													width="35" height="35" alt="...">
-												<i class="busy dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Rajesh</h5>
-													<div class="media-heading-sub">Director</div>
-												</div>
-											</li>
-											<li class="media"><img class="media-object" src="../../assets/img/user/user5.jpg"
-													width="35" height="35" alt="...">
-												<i class="away dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Jacob Ryan</h5>
-													<div class="media-heading-sub">Ortho Surgeon</div>
-												</div>
-											</li>
-											<li class="media">
-												<div class="media-status">
-													<span class="badge badge-danger">8</span>
-												</div> <img class="media-object" src="../../assets/img/user/user4.jpg"
-													width="35" height="35" alt="...">
-												<i class="online dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Kehn Anderson</h5>
-													<div class="media-heading-sub">CEO</div>
-												</div>
-											</li>
-											<li class="media"><img class="media-object" src="../../assets/img/user/user2.jpg"
-													width="35" height="35" alt="...">
-												<i class="busy dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Sarah Smith</h5>
-													<div class="media-heading-sub">Anaesthetics</div>
-												</div>
-											</li>
-											<li class="media"><img class="media-object" src="../../assets/img/user/user7.jpg"
-													width="35" height="35" alt="...">
-												<i class="online dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Vlad Cardella</h5>
-													<div class="media-heading-sub">Cardiologist</div>
-												</div>
-											</li>
-										</ul>
-										<div class="chat-header">
-											<h5 class="list-heading">Offline</h5>
-										</div>
-										<ul class="media-list list-items">
-											<li class="media">
-												<div class="media-status">
-													<span class="badge badge-warning">4</span>
-												</div> <img class="media-object" src="../../assets/img/user/user6.jpg"
-													width="35" height="35" alt="...">
-												<i class="offline dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Jennifer Maklen</h5>
-													<div class="media-heading-sub">Nurse</div>
-													<div class="media-heading-small">Last seen 01:20 AM</div>
-												</div>
-											</li>
-											<li class="media"><img class="media-object" src="../../assets/img/user/user8.jpg"
-													width="35" height="35" alt="...">
-												<i class="offline dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Lina Smith</h5>
-													<div class="media-heading-sub">Ortho Surgeon</div>
-													<div class="media-heading-small">Last seen 11:14 PM</div>
-												</div>
-											</li>
-											<li class="media">
-												<div class="media-status">
-													<span class="badge badge-success">9</span>
-												</div> <img class="media-object" src="../../assets/img/user/user9.jpg"
-													width="35" height="35" alt="...">
-												<i class="offline dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Jeff Adam</h5>
-													<div class="media-heading-sub">Compounder</div>
-													<div class="media-heading-small">Last seen 3:31 PM</div>
-												</div>
-											</li>
-											<li class="media"><img class="media-object" src="../../assets/img/user/user10.jpg"
-													width="35" height="35" alt="...">
-												<i class="offline dot"></i>
-												<div class="media-body">
-													<h5 class="media-heading">Anjelina Cardella</h5>
-													<div class="media-heading-sub">Physiotherapist</div>
-													<div class="media-heading-small">Last seen 7:45 PM</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- End Doctor Chat -->
-							<!-- Start Setting Panel -->
-							<div class="tab-pane chat-sidebar-settings animated slideInUp" id="quick_sidebar_tab_3">
-								<div class="chat-sidebar-settings-list slimscroll-style">
-									<div class="chat-header">
-										<h5 class="list-heading">Layout Settings</h5>
-									</div>
-									<div class="chatpane inner-content ">
-										<div class="settings-list">
-											<div class="setting-item">
-												<div class="setting-text">Sidebar Position</div>
-												<div class="setting-set">
-													<select
-														class="sidebar-pos-option form-control input-inline input-sm input-small ">
-														<option value="left" selected="selected">Left</option>
-														<option value="right">Right</option>
-													</select>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">Header</div>
-												<div class="setting-set">
-													<select
-														class="page-header-option form-control input-inline input-sm input-small ">
-														<option value="fixed" selected="selected">Fixed</option>
-														<option value="default">Default</option>
-													</select>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">Sidebar Menu </div>
-												<div class="setting-set">
-													<select
-														class="sidebar-menu-option form-control input-inline input-sm input-small ">
-														<option value="accordion" selected="selected">Accordion</option>
-														<option value="hover">Hover</option>
-													</select>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">Footer</div>
-												<div class="setting-set">
-													<select
-														class="page-footer-option form-control input-inline input-sm input-small ">
-														<option value="fixed">Fixed</option>
-														<option value="default" selected="selected">Default</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="chat-header">
-											<h5 class="list-heading">Account Settings</h5>
-										</div>
-										<div class="settings-list">
-											<div class="setting-item">
-												<div class="setting-text">Notifications</div>
-												<div class="setting-set">
-													<div class="switch">
-														<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-															for="switch-1">
-															<input type="checkbox" id="switch-1"
-																class="mdl-switch__input" checked>
-														</label>
-													</div>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">Show Online</div>
-												<div class="setting-set">
-													<div class="switch">
-														<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-															for="switch-7">
-															<input type="checkbox" id="switch-7"
-																class="mdl-switch__input" checked>
-														</label>
-													</div>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">Status</div>
-												<div class="setting-set">
-													<div class="switch">
-														<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-															for="switch-2">
-															<input type="checkbox" id="switch-2"
-																class="mdl-switch__input" checked>
-														</label>
-													</div>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">2 Steps Verification</div>
-												<div class="setting-set">
-													<div class="switch">
-														<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-															for="switch-3">
-															<input type="checkbox" id="switch-3"
-																class="mdl-switch__input" checked>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="chat-header">
-											<h5 class="list-heading">General Settings</h5>
-										</div>
-										<div class="settings-list">
-											<div class="setting-item">
-												<div class="setting-text">Location</div>
-												<div class="setting-set">
-													<div class="switch">
-														<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-															for="switch-4">
-															<input type="checkbox" id="switch-4"
-																class="mdl-switch__input" checked>
-														</label>
-													</div>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">Save Histry</div>
-												<div class="setting-set">
-													<div class="switch">
-														<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-															for="switch-5">
-															<input type="checkbox" id="switch-5"
-																class="mdl-switch__input" checked>
-														</label>
-													</div>
-												</div>
-											</div>
-											<div class="setting-item">
-												<div class="setting-text">Auto Updates</div>
-												<div class="setting-set">
-													<div class="switch">
-														<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-															for="switch-6">
-															<input type="checkbox" id="switch-6"
-																class="mdl-switch__input" checked>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 				<!-- end chat sidebar -->
 			</div>
 			<!-- end page container -->
