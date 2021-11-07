@@ -293,7 +293,7 @@ $ModeloEncargado->validateSession();
                                                                     foreach ($Encargado as $Enc) {
                                                             ?>
                                                             <form action="../../controller/encargadoController.php" method="POST">
-															<div class="col-md-6 col-sm-6">
+															<div class="col-md-6 col-sm-6"> 
 																<div class="form-group">
 																	<img src="<?php echo $Enc['Foto_Encargado'] ?>">
 																	<?php echo '<img src=" $Enc["Foto_Encargado"] ">'?>
