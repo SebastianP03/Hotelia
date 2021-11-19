@@ -13,23 +13,23 @@ $ModeloEncargado->validateSession();
 	<meta name="description" content="Responsive Admin Template" />
 	<meta name="author" content="SmartUniversity" />
 	<!-- icons -->
-	<link href="../../assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--bootstrap -->
-	<link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/plugins/summernote/summernote.css" rel="stylesheet">
+	<link href="../../assets1/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/summernote/summernote.css" rel="stylesheet">
 	<!-- morris chart -->
-	<link href="../../assets/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
 	<!-- Material Design Lite CSS -->
-	<link rel="stylesheet" href="../../assets/plugins/material/material.min.css">
-	<link rel="stylesheet" href="../../assets/css/material_style.css">
+	<link rel="stylesheet" href="../../assets1/plugins/material/material.min.css">
+	<link rel="stylesheet" href="../../assets1/css/material_style.css">
 	<!-- animation -->
-	<link href="../../assets/css/pages/animate_page.css" rel="stylesheet">
+	<link href="../../assets1/css/pages/animate_page.css" rel="stylesheet">
 	<!-- Template Styles -->
-	<link href="../../assets/css/plugins.min.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/css/responsive.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/css/theme-color.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/plugins.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/theme-color.css" rel="stylesheet" type="text/css" />
 	<!-- favicon -->
 
         <title>Hotelia</title>
@@ -85,7 +85,7 @@ $ModeloEncargado->validateSession();
 						<li class="dropdown dropdown-user">
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
 								data-close-others="true">
-								<img alt="" class="img-circle " src="../../assets/img/dp.jpg" />
+								<img alt="" class="img-circle " src="../../assets1/img/dp.jpg" />
 								<span class="username username-hide-on-mobile"> John </span>
 								<i class="fa fa-angle-down"></i>
 							</a>
@@ -295,8 +295,6 @@ $ModeloEncargado->validateSession();
                                                             <form action="../../controller/encargadoController.php" method="POST">
 															<div class="col-md-6 col-sm-6"> 
 																<div class="form-group">
-																	<img src="<?php echo $Enc['Foto_Encargado'] ?>">
-																	<?php echo '<img src=" $Enc["Foto_Encargado"] ">'?>
 																	<input type="hidden" name="IdEnc" value="<?php echo $_SESSION['ID']?>">
                                                                 <label>Nombres</label>
                                                                     <input type="text" class="form-control" name="NomEnc" value="<?php echo $Enc['Nombres_Encargado']?>">
@@ -368,20 +366,20 @@ $ModeloEncargado->validateSession();
 		</div>
 	</div>
 	<!-- start js include path -->
-	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
-	<script src="../../assets/plugins/popper/popper.min.js"></script>
-	<script src="../../assets/plugins/jquery-blockui/jquery.blockui.min.js"></script>
-	<script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../../assets1/plugins/jquery/jquery.min.js"></script>
+	<script src="../../assets1/plugins/popper/popper.min.js"></script>
+	<script src="../../assets1/plugins/jquery-blockui/jquery.blockui.min.js"></script>
+	<script src="../../assets1/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<!-- bootstrap -->
-	<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../assets1/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<!-- Common js-->
-	<script src="../../assets/js/app.js"></script>
-	<script src="../../assets/js/layout.js"></script>
-	<script src="../../assets/js/theme-color.js"></script>
+	<script src="../../assets1/js/app.js"></script>
+	<script src="../../assets1/js/layout.js"></script>
+	<script src="../../assets1/js/theme-color.js"></script>
 	<!-- Material -->
-	<script src="../../assets/plugins/material/material.min.js"></script>
+	<script src="../../assets1/plugins/material/material.min.js"></script>
 	<!-- animation -->
-	<script src="../../assets/js/pages/ui/animations.js"></script>
+	<script src="../../assets1/js/pages/ui/animations.js"></script>
 	<!-- end js include path -->
 </body>
 

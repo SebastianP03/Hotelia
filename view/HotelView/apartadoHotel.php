@@ -20,23 +20,23 @@ $ModeloHotel=new Hotel();
     <meta name="author" content="SmartUniversity" />
     
     <!-- icons -->
-    <link href="../../assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets1/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets1/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- bootstrap -->
-    <link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets1/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- data tables -->
-    <link href="../../assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet"
+    <link href="../../assets1/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.css" rel="stylesheet"
         type="text/css" />
     <!-- Material Design Lite CSS -->
-    <link rel="stylesheet" href="../../assets/plugins/material/material.min.css">
-    <link rel="stylesheet" href="../../assets/css/material_style.css">
+    <link rel="stylesheet" href="../../assets1/plugins/material/material.min.css">
+    <link rel="stylesheet" href="../../assets1/css/material_style.css">
     <!-- animation -->
-    <link href="../../assets/css/pages/animate_page.css" rel="stylesheet">
+    <link href="../../assets1/css/pages/animate_page.css" rel="stylesheet">
     <!-- Template Styles -->
-    <link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/css/plugins.min.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/css/responsive.css" rel="stylesheet" type="text/css" />
-    <link href="../../assets/css/theme-color.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets1/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets1/css/plugins.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets1/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets1/css/theme-color.css" rel="stylesheet" type="text/css" />
     <!-- favicon -->
 
     <title>Hotelia</title>
@@ -157,7 +157,7 @@ $ModeloHotel=new Hotel();
                                         <li>
                                             <a href="#">
                                                 <span class="photo">
-                                                    <img src="../../assets/img/user/user2.jpg" class="img-circle" alt="">
+                                                    <img src="../../assets1/img/user/user2.jpg" class="img-circle" alt="">
                                                 </span>
                                                 <span class="subject">
                                                     <span class="from"> Sarah Smith </span>
@@ -169,7 +169,7 @@ $ModeloHotel=new Hotel();
                                         <li>
                                             <a href="#">
                                                 <span class="photo">
-                                                    <img src="../../assets/img/user/user3.jpg" class="img-circle" alt="">
+                                                    <img src="../../assets1/img/user/user3.jpg" class="img-circle" alt="">
                                                 </span>
                                                 <span class="subject">
                                                     <span class="from"> John Deo </span>
@@ -182,7 +182,7 @@ $ModeloHotel=new Hotel();
                                         <li>
                                             <a href="#">
                                                 <span class="photo">
-                                                    <img src="../../assets/img/user/user1.jpg" class="img-circle" alt="">
+                                                    <img src="../../assets1/img/user/user1.jpg" class="img-circle" alt="">
                                                 </span>
                                                 <span class="subject">
                                                     <span class="from"> Rajesh </span>
@@ -194,7 +194,7 @@ $ModeloHotel=new Hotel();
                                         <li>
                                             <a href="#">
                                                 <span class="photo">
-                                                    <img src="../../assets/img/user/user8.jpg" class="img-circle" alt="">
+                                                    <img src="../../assets1/img/user/user8.jpg" class="img-circle" alt="">
                                                 </span>
                                                 <span class="subject">
                                                     <span class="from"> Lina Smith </span>
@@ -206,7 +206,7 @@ $ModeloHotel=new Hotel();
                                         <li>
                                             <a href="#">
                                                 <span class="photo">
-                                                    <img src="../../assets/img/user/user5.jpg" class="img-circle" alt="">
+                                                    <img src="../../assets1/img/user/user5.jpg" class="img-circle" alt="">
                                                 </span>
                                                 <span class="subject">
                                                     <span class="from"> Jacob Ryan </span>
@@ -227,7 +227,7 @@ $ModeloHotel=new Hotel();
                         <li class="dropdown dropdown-user">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                 data-close-others="true">
-                                <img alt="" class="img-circle " src="../../assets/img/dp.jpg" />
+                                <img alt="" class="img-circle " src="../../assets1/img/dp.jpg" />
                                 <span class="username username-hide-on-mobile"> John </span>
                                 <i class="fa fa-angle-down"></i>
                             </a>
@@ -287,7 +287,7 @@ $ModeloHotel=new Hotel();
 								<div class="user-panel">
 									<div class="row">
 										<div class="sidebar-userpic">
-											<img src="../../assets/img/sdp.jpg" class="img-responsive" alt=""> </div>
+											<img src="../../assets1/img/sdp.jpg" class="img-responsive" alt=""> </div>
 									</div>
 									<div class="profile-usertitle">
 										<div class="sidebar-userpic-name">     <?php echo "$_SESSION[NOMBRES]" ." ". $_SESSION['APELLIDOS']; ?><br>
@@ -472,29 +472,6 @@ $ModeloHotel=new Hotel();
                                                                         <input type="submit" value="EstadoC" name="AccionB"> Cerrar Hotel
                                                                  </form>
                                                             </li>
-                                                            <li><!-- -->
-                                                                <?php 
-                                                                    if ($Hot['Estado'] == 0) {
-                                                                ?>    
-                                                                        <form action="../../controller/hotelController.php" method="POST">
-                                                                        <input type="hidden" name="IdEnc" value="$_SESSION['ID']">
-                                                                        <input type="hidden" name="IdHot" value="$_SESSION['HOTEL']">
-                                                                        <i class="material-icons">lock</i>
-                                                                        <input type="submit" value="EstadoA" name="AccionB"> Abrir Hotel
-                                                                        </form>
-                                                                <?php 
-                                                                    }else if ($Hot['Estado'] == 1) {
-                                                                ?>
-                                                                        <form action="../../controller/hotelController.php" method="POST">
-                                                                        <input type="hidden" name="IdEnc" value="$_SESSION['ID']">
-                                                                        <input type="hidden" name="IdHot" value="$_SESSION['HOTEL']">
-                                                                        <i class="material-icons">lock</i>
-                                                                        <input type="submit" value="EstadoC" name="AccionB"> Cerrar Hotel
-                                                                        </form>
-                                                                <?php       
-                                                                    }
-                                                                ?>
-                                                            </li>
                                                         </ul>
                                                     </div>
                                                 </td>
@@ -528,24 +505,24 @@ $ModeloHotel=new Hotel();
         <!-- end footer -->
     </div>
     <!-- start js include path -->
-    <script src="../../assets/plugins/jquery/jquery.min.js"></script>
-    <script src="../../assets/plugins/popper/popper.min.js"></script>
-    <script src="../../assets/plugins/jquery-blockui/jquery.blockui.min.js"></script>
-    <script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../../assets1/plugins/jquery/jquery.min.js"></script>
+    <script src="../../assets1/plugins/popper/popper.min.js"></script>
+    <script src="../../assets1/plugins/jquery-blockui/jquery.blockui.min.js"></script>
+    <script src="../../assets1/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <!-- bootstrap -->
-    <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets1/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- data tables -->
-    <script src="../../assets/plugins/datatables/jquery.dataTables.min.js"></script>
-    <script src="../../assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
-    <script src="../../assets/js/pages/table/table_data.js"></script>
+    <script src="../../assets1/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../assets1/plugins/datatables/plugins/bootstrap/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets1/js/pages/table/table_data.js"></script>
     <!-- Common js-->
-    <script src="../../assets/js/app.js"></script>
-    <script src="../../assets/js/layout.js"></script>
-    <script src="../../assets/js/theme-color.js"></script>
+    <script src="../../assets1/js/app.js"></script>
+    <script src="../../assets1/js/layout.js"></script>
+    <script src="../../assets1/js/theme-color.js"></script>
     <!-- Material -->
-    <script src="../../assets/plugins/material/material.min.js"></script>
+    <script src="../../assets1/plugins/material/material.min.js"></script>
     <!-- animation -->
-    <script src="../../assets/js/pages/ui/animations.js"></script>
+    <script src="../../assets1/js/pages/ui/animations.js"></script>
     <!-- end js include path -->
 </body>
 

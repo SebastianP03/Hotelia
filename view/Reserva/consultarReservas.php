@@ -2,7 +2,7 @@
 
 require_once '../../model/reserva.php';
 $model = new Reserva();
-$reserva=$model->listarRes();
+$reserva=$model->listarRes($_SESSION['Id']);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,11 +24,14 @@ $reserva=$model->listarRes();
 
     <div class="container">
         <div class="table responsive">
+            <form action="../../controller/reservaController.php" method="get">
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
+            <th>Numero reserva</th>
                 <th>Nombre hotel</th>
-                <th>Direccion hotel</th>
+                <th>Direccion</th>
+                <th>Habitacion</th>
                 <th>Fecha de la reserva</th>
                 <th>Fecha entrada</th>
                 <th>Fecha salida</th>
@@ -42,8 +45,10 @@ $reserva=$model->listarRes();
         foreach ($reserva as $dato){
         ?>
             <tr>  
-                <td><?php echo $data['Nombre_Hotel'] ?></td>
-                <td><?php echo $data['Direccion_Hotel'] ?></td>
+            <td><?php echo $dato['Id_Reserva'] ?></td>
+                <td><?php echo $dato['Nombre_Hotel'] ?></td>
+                <td><?php echo $dato['Direccion_Hotel'] ?></td>
+                <td><?php echo $dato['Descripcion_Habitacion'] ?></td>
                 <td><?php echo $dato['Fecha_Reserva'] ?></td>
                 <td><?php echo $dato['FechaEntrada_Reserva'] ?></td>
                 <td><?php echo $dato['FechaSalida_Reserva'] ?></td>
@@ -56,6 +61,7 @@ $reserva=$model->listarRes();
         </tbody>
   
     </table>
+    </form>
 </div>
 </div>
 <div class="modal fade" id="modalCRUD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -63,15 +69,27 @@ $reserva=$model->listarRes();
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
         <form id="formReservas">    
             <div class="modal-body">
                 <div class="form-group">
-                <label for="fechaReserva" class="col-form-label">Fecha de la reserva:</label>
-                <input type="datetime" class="form-control" id="fechaReserva" readonly>
+                <label for="nameHotel" class="col-form-label">Nombre Hotel:</label>
+                <input type="text" class="form-control" id="nameHotel">
                 </div>
+                <div class="form-group">
+                <label for="direHotel" class="col-form-label">Direccion:</label>
+                <input type="text" class="form-control" id="direHotel">
+                </div>
+                <div class="form-group">
+                <label for="descHab" class="col-form-label">Habitacion:</label>
+                <input type="text" class="form-control" id="descHab">
+                </div>
+                <div class="form-group">
+                <label for="fechaRes" class="col-form-label">Fecha reserva:</label>
+                <input type="datetime" class="form-control" id="fechaRes"?>
+                </div>  
                 <div class="form-group">
                 <label for="fechaIngreso" class="col-form-label">Fecha Ingreso:</label>
                 <input type="date" class="form-control" id="fechaIngreso" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>>

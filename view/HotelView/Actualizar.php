@@ -25,7 +25,7 @@ $ModeloHotel=new Hotel();
         <link rel="stylesheet" href="../../asset/fonts/flaticon.css">
         <link rel="stylesheet" href="../../asset/css/mobile.css" />
 
-        <script src="../../assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="../../assets1/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
     
@@ -33,7 +33,7 @@ $ModeloHotel=new Hotel();
       <header class="mini-header">
               <a class="menu glyphicon glyphicon-align-justify" href="#"></a>
             <a class="logo" href="#">
-                <img src="../../assets/images/logo.png" alt="logo" />
+                <img src="../../assets1/images/logo.png" alt="logo" />
             </a>
              <a class="search glyphicon glyphicon-search" href="#"></a>
       </header>
@@ -58,7 +58,7 @@ $ModeloHotel=new Hotel();
                             More than <strong class="text-blue">1020</strong> Promo's
                         </a>
                         <a class="logo" href="../../index.php">
-                            <img src="../../assets/images/logo.png" alt="logo" />
+                            <img src="../../assets1/images/logo.png" alt="logo" />
                         </a>
                         <a href="#" class="pull-right">
                             <span class="text-blue text-big">Help And Support</span>
@@ -164,7 +164,7 @@ $ModeloHotel=new Hotel();
             	<span class="icon deco"></span>
             	<div class="row">
                 	<div class="col-sm-2 text-center">
-                    	<img class="logo" src="../../assets/images/logo.png" alt="logo">
+                    	<img class="logo" src="../../assets1/images/logo.png" alt="logo">
                     </div>
                     <div class="col-sm-2">
                     	<ul>
@@ -208,14 +208,14 @@ $ModeloHotel=new Hotel();
         </footer>
         
     </div> <!-- /container -->        
-		<script src="../../assets/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="../../assets/js/jquery-ui.min.js"></script>	
-        <script src="../../assets/js/vendor/bootstrap.min.js"></script>
-        <script src="../../assets/js/bootstrap-datepicker.js"></script>	
-        <script src="../../assets/js/jquery.slides.min.js"></script>	
-        <script src="../../assets/js/jquery.colorbox.js"></script>	
-        <script src="../../assets/js/enquire.min.js"></script>
-        <script src="../../assets/js/main.js"></script>
+		<script src="../../assets1/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="../../assets1/js/jquery-ui.min.js"></script>	
+        <script src="../../assets1/js/vendor/bootstrap.min.js"></script>
+        <script src="../../assets1/js/bootstrap-datepicker.js"></script>	
+        <script src="../../assets1/js/jquery.slides.min.js"></script>	
+        <script src="../../assets1/js/jquery.colorbox.js"></script>	
+        <script src="../../assets1/js/enquire.min.js"></script>
+        <script src="../../assets1/js/main.js"></script>
         <!-- InstanceBeginEditable name="js_custom" --><!-- InstanceEndEditable -->
     </body>
     </html>

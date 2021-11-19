@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../../model/cliente.php');
+require_once '../model/cliente.php';
 $model = new Cliente();
 $cliente=$model->tipoDoc();
 ?>
@@ -9,7 +9,7 @@ $cliente=$model->tipoDoc();
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="../../assets/css/signup.css"/>
+    <link rel="stylesheet" href="../assets/css/signup.css"/>
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <title>Registrate</title>
@@ -33,11 +33,11 @@ $cliente=$model->tipoDoc();
           </div>
         </div>    
         <div class="frontbox">
-          <form action="../../controller/encargadoController.php" method="POST" autocomplete="off">
+          <form action="../controller/encargadoController.php" method="POST" autocomplete="off">
           <div class="encargado">
             <h2>Encargado</h2>
             <div class="inputbox">
-              <input type="text" class="name" name="NomEnc" placeholder="Nombres" required/>
+              <input type="text" class="name" name="nomEnc" placeholder="Nombres" required/>
               <input type="text" class="lastname" name="ApeEnc" placeholder="Apellidos" required/>
               <select name="TipoDoc">
                 <option value="1">C.C</option>
@@ -51,7 +51,7 @@ $cliente=$model->tipoDoc();
               <input class="password" type="password" name="ConEnc" placeholder="Contraseña" required/>
               <i class="show fas fa-eye"></i>
               <i class="hide fas fa-eye-slash"></i>
-              <button name="AccionB" value="Registrarse"><b>Registrarse</b></button>
+              <button><b>Registrarse</b></button>
           </div>
         </form>
         </div>
@@ -86,7 +86,7 @@ $cliente=$model->tipoDoc();
         </form>
         </div>
       </div>
-      <script src="../../library/jquery-3.6.0.min.js"></script>
-      <script src="../../assets/js/signup.js"></script>
+      <script src="../library/jquery-3.6.0.min.js"></script>
+      <script src="../assets/js/signup.js"></script>
 </body>
 </html>

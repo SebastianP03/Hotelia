@@ -13,23 +13,23 @@ $ModeloEncargado->validateSession();
 	<meta name="description" content="Responsive Admin Template" />
 	<meta name="author" content="SmartUniversity" />
 	<!-- icons -->
-	<link href="../../assets/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<!--bootstrap -->
-	<link href="../../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/plugins/summernote/summernote.css" rel="stylesheet">
+	<link href="../../assets1/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/summernote/summernote.css" rel="stylesheet">
 	<!-- morris chart -->
-	<link href="../../assets/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
 	<!-- Material Design Lite CSS -->
-	<link rel="stylesheet" href="../../assets/plugins/material/material.min.css">
-	<link rel="stylesheet" href="../../assets/css/material_style.css">
+	<link rel="stylesheet" href="../../assets1/plugins/material/material.min.css">
+	<link rel="stylesheet" href="../../assets1/css/material_style.css">
 	<!-- animation -->
-	<link href="../../assets/css/pages/animate_page.css" rel="stylesheet">
+	<link href="../../assets1/css/pages/animate_page.css" rel="stylesheet">
 	<!-- Template Styles -->
-	<link href="../../assets/css/plugins.min.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/css/style.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/css/responsive.css" rel="stylesheet" type="text/css" />
-	<link href="../../assets/css/theme-color.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/plugins.min.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/responsive.css" rel="stylesheet" type="text/css" />
+	<link href="../../assets1/css/theme-color.css" rel="stylesheet" type="text/css" />
 	<!-- favicon -->
 
         <title>Hotelia</title>
@@ -160,7 +160,7 @@ $ModeloEncargado->validateSession();
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="../../assets/img/user/user2.jpg" class="img-circle" alt="">
+													<img src="../../assets1/img/user/user2.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Sarah Smith </span>
@@ -172,7 +172,7 @@ $ModeloEncargado->validateSession();
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="../../assets/img/user/user3.jpg" class="img-circle" alt="">
+													<img src="../../assets1/img/user/user3.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> John Deo </span>
@@ -185,7 +185,7 @@ $ModeloEncargado->validateSession();
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="../../assets/img/user/user1.jpg" class="img-circle" alt="">
+													<img src="../../assets1/img/user/user1.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Rajesh </span>
@@ -197,7 +197,7 @@ $ModeloEncargado->validateSession();
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="../../assets/img/user/user8.jpg" class="img-circle" alt="">
+													<img src="../../assets1/img/user/user8.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Lina Smith </span>
@@ -209,7 +209,7 @@ $ModeloEncargado->validateSession();
 										<li>
 											<a href="#">
 												<span class="photo">
-													<img src="../../assets/img/user/user5.jpg" class="img-circle" alt="">
+													<img src="../../assets1/img/user/user5.jpg" class="img-circle" alt="">
 												</span>
 												<span class="subject">
 													<span class="from"> Jacob Ryan </span>
@@ -230,7 +230,7 @@ $ModeloEncargado->validateSession();
 						<li class="dropdown dropdown-user">
 							<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
 								data-close-others="true">
-								<img alt="" class="img-circle " src="../../assets/img/dp.jpg" />
+								<img alt="" class="img-circle " src="../../assets1/img/dp.jpg" />
 								<span class="username username-hide-on-mobile"> John </span>
 								<i class="fa fa-angle-down"></i>
 							</a>
@@ -292,7 +292,7 @@ $ModeloEncargado->validateSession();
 								<div class="user-panel">
 									<div class="row">
 										<div class="sidebar-userpic">
-											<img src="../../assets/img/sdp.jpg" class="img-responsive" alt=""> </div>
+											<img src="../../assets1/img/sdp.jpg" class="img-responsive" alt=""> </div>
 									</div>
 									<div class="profile-usertitle">
 										<div class="sidebar-userpic-name">     <?php echo "$_SESSION[NOMBRES]" ." ". $_SESSION['APELLIDOS']; ?><br>
@@ -765,7 +765,7 @@ $ModeloEncargado->validateSession();
 												<div class="row">
 													<div class="col-md-8 col-sm-8">
 														<div class="prog-avatar">
-															<img src="../../assets/img/user/user1.jpg" alt="" width="40"
+															<img src="../../assets1/img/user/user1.jpg" alt="" width="40"
 																height="40">
 														</div>
 														<div class="details">
@@ -788,7 +788,7 @@ $ModeloEncargado->validateSession();
 												<div class="row">
 													<div class="col-md-8 col-sm-8">
 														<div class="prog-avatar">
-															<img src="../../assets/img/user/user2.jpg" alt="" width="40"
+															<img src="../../assets1/img/user/user2.jpg" alt="" width="40"
 																height="40">
 														</div>
 														<div class="details">
@@ -811,7 +811,7 @@ $ModeloEncargado->validateSession();
 												<div class="row">
 													<div class="col-md-8 col-sm-8">
 														<div class="prog-avatar">
-															<img src="../../assets/img/user/user3.jpg" alt="" width="40"
+															<img src="../../assets1/img/user/user3.jpg" alt="" width="40"
 																height="40">
 														</div>
 														<div class="details">
@@ -835,7 +835,7 @@ $ModeloEncargado->validateSession();
 												<div class="row">
 													<div class="col-md-8 col-sm-8">
 														<div class="prog-avatar">
-															<img src="../../assets/img/user/user4.jpg" alt="" width="40"
+															<img src="../../assets1/img/user/user4.jpg" alt="" width="40"
 																height="40">
 														</div>
 														<div class="details">
@@ -859,7 +859,7 @@ $ModeloEncargado->validateSession();
 												<div class="row">
 													<div class="col-md-8 col-sm-8">
 														<div class="prog-avatar">
-															<img src="../../assets/img/user/user5.jpg" alt="" width="40"
+															<img src="../../assets1/img/user/user5.jpg" alt="" width="40"
 																height="40">
 														</div>
 														<div class="details">
@@ -882,7 +882,7 @@ $ModeloEncargado->validateSession();
 												<div class="row">
 													<div class="col-md-8 col-sm-8">
 														<div class="prog-avatar">
-															<img src="../../assets/img/user/user6.jpg" alt="" width="40"
+															<img src="../../assets1/img/user/user6.jpg" alt="" width="40"
 																height="40">
 														</div>
 														<div class="details">
@@ -1020,7 +1020,7 @@ $ModeloEncargado->validateSession();
 										<h5 class="list-heading">Online</h5>
 									</div>
 									<ul class="media-list list-items">
-										<li class="media"><img class="media-object" src="../../assets/img/user/user3.jpg"
+										<li class="media"><img class="media-object" src="../../assets1/img/user/user3.jpg"
 												width="35" height="35" alt="...">
 											<i class="online dot"></i>
 											<div class="media-body">
@@ -1031,7 +1031,7 @@ $ModeloEncargado->validateSession();
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-success">5</span>
-											</div> <img class="media-object" src="../../assets/img/user/user1.jpg" width="35"
+											</div> <img class="media-object" src="../../assets1/img/user/user1.jpg" width="35"
 												height="35" alt="...">
 											<i class="busy dot"></i>
 											<div class="media-body">
@@ -1039,7 +1039,7 @@ $ModeloEncargado->validateSession();
 												<div class="media-heading-sub">Director</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="../../assets/img/user/user5.jpg"
+										<li class="media"><img class="media-object" src="../../assets1/img/user/user5.jpg"
 												width="35" height="35" alt="...">
 											<i class="away dot"></i>
 											<div class="media-body">
@@ -1050,7 +1050,7 @@ $ModeloEncargado->validateSession();
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-danger">8</span>
-											</div> <img class="media-object" src="../../assets/img/user/user4.jpg" width="35"
+											</div> <img class="media-object" src="../../assets1/img/user/user4.jpg" width="35"
 												height="35" alt="...">
 											<i class="online dot"></i>
 											<div class="media-body">
@@ -1058,7 +1058,7 @@ $ModeloEncargado->validateSession();
 												<div class="media-heading-sub">CEO</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="../../assets/img/user/user2.jpg"
+										<li class="media"><img class="media-object" src="../../assets1/img/user/user2.jpg"
 												width="35" height="35" alt="...">
 											<i class="busy dot"></i>
 											<div class="media-body">
@@ -1066,7 +1066,7 @@ $ModeloEncargado->validateSession();
 												<div class="media-heading-sub">Anaesthetics</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="../../assets/img/user/user7.jpg"
+										<li class="media"><img class="media-object" src="../../assets1/img/user/user7.jpg"
 												width="35" height="35" alt="...">
 											<i class="online dot"></i>
 											<div class="media-body">
@@ -1082,7 +1082,7 @@ $ModeloEncargado->validateSession();
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-warning">4</span>
-											</div> <img class="media-object" src="../../assets/img/user/user6.jpg" width="35"
+											</div> <img class="media-object" src="../../assets1/img/user/user6.jpg" width="35"
 												height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -1091,7 +1091,7 @@ $ModeloEncargado->validateSession();
 												<div class="media-heading-small">Last seen 01:20 AM</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="../../assets/img/user/user8.jpg"
+										<li class="media"><img class="media-object" src="../../assets1/img/user/user8.jpg"
 												width="35" height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -1103,7 +1103,7 @@ $ModeloEncargado->validateSession();
 										<li class="media">
 											<div class="media-status">
 												<span class="badge badge-success">9</span>
-											</div> <img class="media-object" src="../../assets/img/user/user9.jpg" width="35"
+											</div> <img class="media-object" src="../../assets1/img/user/user9.jpg" width="35"
 												height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -1112,7 +1112,7 @@ $ModeloEncargado->validateSession();
 												<div class="media-heading-small">Last seen 3:31 PM</div>
 											</div>
 										</li>
-										<li class="media"><img class="media-object" src="../../assets/img/user/user10.jpg"
+										<li class="media"><img class="media-object" src="../../assets1/img/user/user10.jpg"
 												width="35" height="35" alt="...">
 											<i class="offline dot"></i>
 											<div class="media-body">
@@ -1289,26 +1289,26 @@ $ModeloEncargado->validateSession();
 		<!-- end footer -->
 	</div>
 	<!-- start js include path -->
-	<script src="../../assets/plugins/jquery/jquery.min.js"></script>
-	<script src="../../assets/plugins/popper/popper.min.js"></script>
-	<script src="../../assets/plugins/jquery-blockui/jquery.blockui.min.js"></script>
-	<script src="../../assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../../assets1/plugins/jquery/jquery.min.js"></script>
+	<script src="../../assets1/plugins/popper/popper.min.js"></script>
+	<script src="../../assets1/plugins/jquery-blockui/jquery.blockui.min.js"></script>
+	<script src="../../assets1/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<!-- bootstrap -->
-	<script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<script src="../../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-	<script src="../../assets/js/pages/sparkline/sparkline-data.js"></script>
+	<script src="../../assets1/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../assets1/plugins/sparkline/jquery.sparkline.min.js"></script>
+	<script src="../../assets1/js/pages/sparkline/sparkline-data.js"></script>
 	<!-- Common js-->
-	<script src="../../assets/js/app.js"></script>
-	<script src="../../assets/js/layout.js"></script>
-	<script src="../../assets/js/theme-color.js"></script>
+	<script src="../../assets1/js/app.js"></script>
+	<script src="../../assets1/js/layout.js"></script>
+	<script src="../../assets1/js/theme-color.js"></script>
 	<!-- material -->
-	<script src="../../assets/plugins/material/material.min.js"></script>
+	<script src="../../assets1/plugins/material/material.min.js"></script>
 	<!-- animation -->
-	<script src="../../assets/js/pages/ui/animations.js"></script>
+	<script src="../../assets1/js/pages/ui/animations.js"></script>
 	<!-- morris chart -->
-	<script src="../../assets/plugins/morris/morris.min.js"></script>
-	<script src="../../assets/plugins/morris/raphael-min.js"></script>
-	<script src="../../assets/js/pages/chart/morris/morris_home_data.js"></script>
+	<script src="../../assets1/plugins/morris/morris.min.js"></script>
+	<script src="../../assets1/plugins/morris/raphael-min.js"></script>
+	<script src="../../assets1/js/pages/chart/morris/morris_home_data.js"></script>
 	<!-- end js include path -->
 </body>
 </html>

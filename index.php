@@ -1,6 +1,6 @@
 <?php
 
-require_once 'model/hotelModel.php';
+require_once 'model/hotel.php';
 $model = new hotel();
 $hotel=$model->listarHot();
 ?>
@@ -15,20 +15,23 @@ $hotel=$model->listarHot();
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="asset/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="asset/css/jquery-ui.css" />
-        <link rel="stylesheet" href="asset/css/main.css" />
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
         <link rel="stylesheet" href="fonts/flaticon.css" />
-        <link rel="stylesheet" href="asset/css/mobile.css" />
+        <link rel="stylesheet" href="assets/css/mobile.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+        	<!-- Date Time item CSS -->
+	<link rel="stylesheet" href="assets/plugins/flatpicker/flatpickr.min.css">
 
-        <script src="asset/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
     	<div class="login-popup cb-popup" id="login-block">
         	
                 <div class="wrap-register">
                     
-                  <h2 class="title"><img src="asset/images/logo2.png" alt=""></h2>
+                  <h2 class="title"><img src="assets/images/logo2.png" alt=""></h2>
                   <!-- <div class="social-login clearfix">
                     <a href="#" class="btn-login facebook"></a>
                     <a href="#" id="signInButton" class="btn-login google"></a>
@@ -37,16 +40,16 @@ $hotel=$model->listarHot();
                   <div class="line-or"><div class="text-or"></div></div> 
                    -->
                   <div class="clear"></div>
-                  <form method="POST" action="controller/encargadoController.php" accept-charset="UTF-8"><input name="_token" type="hidden" value="k5dNpcDie87dqH4093X4P3Do2WFmaArP3FsGmom6">
+                  <form method="POST" action="controller/clienteController.php" accept-charset="UTF-8"><input name="_token" type="hidden" value="k5dNpcDie87dqH4093X4P3Do2WFmaArP3FsGmom6">
                       <div class="form-group">
-                          <input type="text" class="icon-a icon-a-user form-control" autocomplete="off" id="email"name="CorEnc" placeholder="Correo">
+                          <input type="email" class="icon-a icon-a-user form-control" autocomplete="off" id="email" name="email" placeholder="Correo">
                       </div>
     
     
     
                       <!-- sample input id warning -->
                       <div class="form-group">
-                          <input type="password" id="password" class="icon-a icon-a-lock form-control" name="ConEnc" placeholder="Contraseña">
+                          <input type="password" id="password" class="icon-a icon-a-lock form-control" name="password" placeholder="Contraseña">
                           <div class="forgot">Olvidaste tu <a href="http://webfographics.com/forgot-password">contraseña</a></div>
                       </div>
     
@@ -60,22 +63,69 @@ $hotel=$model->listarHot();
                       <div class="top-warning "></div>
     
                     <div class="btn-block">
-                      <button type="submit" class="btn btn-danger btn-lg" value="IniciarSesion" name="AccionB">INICIAR SESION</button>
+                      <button type="submit" name="btn" value="login" class="btn btn-danger btn-lg">INICIAR SESION</button>
                       <span id="pass_hide" hidden="hidden">hide</span>
                       <div class="member-wrap">
-                      <span>¿No estas registrado?</span> <a class="login-now" href="view/Cliente/signup.php">Registrate ahora</a>
+                          <span>¿No estas registrado?</span> <a class="login-now" href="view/Cliente/register.php">Registrate ahora</a>
                       </div>
                     </div>
               </form>
             </div>
             
         </div>
+
+        <div class="login-popup cb-popup" id="login-block2">
+        	
+            <div class="wrap-register">
+                
+              <h2 class="title"><img src="assets/images/logo2.png" alt=""></h2>
+              <!-- <div class="social-login clearfix">
+                <a href="#" class="btn-login facebook"></a>
+                <a href="#" id="signInButton" class="btn-login google"></a>
+              </div>
+
+              <div class="line-or"><div class="text-or"></div></div> 
+               -->
+              <div class="clear"></div>
+              <form method="POST" action="controller/encargadoController.php" accept-charset="UTF-8"><input name="_token" type="hidden" value="k5dNpcDie87dqH4093X4P3Do2WFmaArP3FsGmom6">
+                  <div class="form-group">
+                      <input type="text" class="icon-a icon-a-user form-control" autocomplete="off" id="email"name="CorEnc" placeholder="Correo">
+                  </div>
+
+
+
+                  <!-- sample input id warning -->
+                  <div class="form-group">
+                      <input type="password" id="password" class="icon-a icon-a-lock form-control" name="ConEnc" placeholder="Contraseña">
+                      <div class="forgot">Olvidaste tu <a href="http://webfographics.com/forgot-password">contraseña</a></div>
+                  </div>
+
+                  <div class="form-group text-title" style="display: none;">
+                      <input type="checkbox" name="remember_me">Recuerdame
+                  </div>
+
+                  <input type="text" hidden="hidden" id="os" name="os">
+                  <input type="text" hidden="hidden" id="browser" name="browser">
+
+                  <div class="top-warning "></div>
+
+                <div class="btn-block">
+                  <button type="submit" class="btn btn-danger btn-lg" value="IniciarSesion" name="AccionB">INICIAR SESION</button>
+                  <span id="pass_hide" hidden="hidden">hide</span>
+                  <div class="member-wrap">
+                  <span>¿No estas registrado?</span> <a class="login-now" href="view/Cliente/signup.php">Registrate ahora</a>
+                  </div>
+                </div>
+          </form>
+        </div>
         
+    </div>
+    
 		<div class="main-wrap">
           <header class="mini-header">
           		<a class="menu glyphicon glyphicon-align-justify" href="#"></a>
                 <a class="logo" href="#">
-                    <img src="asset/images/logo.png" alt="logo" />
+                    <img src="assets/images/logo.png" alt="logo" />
                 </a>
                  <a class="search glyphicon glyphicon-search" href="#"></a>
           </header>
@@ -83,50 +133,63 @@ $hotel=$model->listarHot();
        	  <header class="main-header" id="header">
             	<div class="top clearfix">
                 	<div class="container">
-                        
-                        <ul class="pull-right">
-                            <li class="user">
-                                <a class="btn btn-danger" id="login_btn" href="view/signup.php">Iniciar sesion</a>
-                            </li>
-                            <li class="separator"></li>
-                                <li class="dropdown">
-                                <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
-                                    <img src="asset/images/panda.jpg" alt=""/>
-                                    <span class="caret"></span>
-                <ul class="dropdown-menu">
-                    
-                <li><a href="#">Vistos recientemente</a></li>
-                <li><a href="view/Reserva/consultarReservas.php">Reservaciones</a></li>
-                <li><a href="view/Cliente/configCuenta.html">Configuracion de la cuenta</a></li>
-                <li><a href="#">Informacion general</a></li>
-                <hr>
-                <li><a href="#">Cerrar sesion</a></li>
-              </ul>
-                </li>
-                      
+                    	<ul class="pull-left contact-info">
+                            <li><i class="glyphicon glyphicon-envelope"></i> info@hotelia.com</li>
+                            <li><i class="glyphicon glyphicon-phone"></i> +62903244222</li>
+                        </ul>
+                            <?php
+                          if($_SESSION==null){
+                            echo '<ul class="pull-right">';
+                            echo '<li class="user">';
+                                echo '<a class="btn btn-danger" id="login_btn">Iniciar sesion</a>';
+                      echo '</li>';
+                                echo '<li class="separator"></li>';
+                                echo '<li>';
+                                echo '<a class="btn btn-danger" id="login_btn2">Gestiona tu hotel</a>';
+                            echo '</li>';
+                            echo '<li class="separator"></li>';
+                            echo '<ul>';
+                          }else{
+                            echo '<ul class="pull-right"  style=" display: none;"> ';
+                            echo '<li class="user">>';
+                                echo '<a class="btn btn-danger" id="login_btn">Iniciar sesion</a>';
+                      echo '</li>';
+                                echo '<li class="separator">></li>';
+                                echo '<li>';
+                                echo '<a class="btn btn-danger" id="login_btn2">Gestiona tu hotel</a>';
+                            echo '</li>';
+                            echo '<li class="separator">></li>';
+                            echo '</ul>';
+                            echo "<li class='pull-right'>";
+                            echo "<a id='drop' href='view/Cliente/dashboard.php'>";
+                                echo "Bienvenido ".$_SESSION['Nombre']." <img src='assets/images/panda.jpg' alt=''/>";
+                                echo "</li>";
+                          }
+                            ?>
+                           
                     </div>
                 </div>
                 
                 <div class="main-menu">
                 	<div class="container">
                     	<a href="#" class="cur pull-left">
-                            <span class="text-blue text-big">Flight Ticket</span>
-                            More than <strong class="text-blue">1020</strong> Destination
+                            <span class="text-blue text-big">Hotelia</span>
+                            Nuestros <strong class="text-blue">servicios</strong>
                         </a>
                         <a href="#" class="pull-left">
-                            <span class="text-blue text-big">Traveling Promo</span>
-                            More than <strong class="text-blue">1020</strong> Promo's
+                            <span class="text-blue text-big">Popular</span>
+                            Sitios recomendados para tu viaje
                         </a>
                         <a class="logo" href="index.php">
-                            <img src="asset/images/logo.png" alt="logo" />
+                            <img src="assets/images/logo.png" alt="logo" />
                         </a>
                         <a href="#" class="pull-right">
-                            <span class="text-blue text-big">Help And Support</span>
-                            Duis autem vel eum iriue
+                            <span class="text-blue text-big">¿Por qué Hotelia?</span>
+                            Las ventajas que te ofrecemos
                         </a>
                         <a href="#" class="pull-right">
-                            <span class="text-blue text-big">News And Article</span>
-                            Lorem Ipsum dolor sit amet
+                            <span class="text-blue text-big">Soporte</span>
+                            Todo sobre nosotros
                         </a>
                     </div>
                 </div>
@@ -145,9 +208,9 @@ $hotel=$model->listarHot();
               <input name="cs_anchor1" id='cs_pause1_2' type="radio" class='cs_anchor pause'>
               <ul>
                   <li class="cs_skeleton"><img src="cssslider_files/csss_images1/bogota1.jpg" style="width: 100%;"></li>
-                  <li class='num0 img slide'> <img src='asset/images/slider/bogota1.jpg' alt='img1' title='img1'></li>
-                  <li class='num1 img slide'> <img src='asset/images/slider/bogota2.jpg' alt='img2' title='img2'></li>
-                  <li class='num2 img slide'> <img src='asset/images/slider/bogota3.jpg' alt='img3' title='img3'></li>
+                  <li class='num0 img slide'> <img src='assets/images/slider/bogota1.jpg' alt='img1' title='img1' /></li>
+                  <li class='num1 img slide'> <img src='assets/images/slider/bogota2.jpg' alt='img2' title='img2' /></li>
+                  <li class='num2 img slide'> <img src='assets/images/slider/bogota3.jpg' alt='img3' title='img3' /></li>
               </ul>
               <div class='cs_description'>
                   <label class='num0'>
@@ -202,21 +265,25 @@ $hotel=$model->listarHot();
               </div>
           </div>
       </div>
+          <form id="Reserva" action="view/Hotel/hotel.php" method="get">
         <div id="search" class="search">
             <div class="container">
                 <div class="form-group row no-margin">
-             
                     <div class="input col-sm-4">
                         <label>Destino :</label>
                         <input type="text" class="icon-a icon-a-plane-down autocomplete" placeholder="Lugar destino"/>
                     </div>
                     <div class="input col-sm-2">
-                        <label>Entrada :</label>
-                        <input type="text" class="icon-a icon-a-calendar datepicker" placeholder="dd/mm/yyyy" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>/>
-                    </div>
-                    <div class="input col-sm-2">
-                        <label class="check checked"><input type="checkbox" /> Salida :</label>
-                        <input type="text" class="icon-a icon-a-calendar datepicker" placeholder="dd/mm/yyyy" min=<?php $hoy=date("Y-m-d"); echo $hoy;?>/>
+                        <label>Fecha :</label>
+                        <div class="card-box">
+								<div class="card-body ">
+										<div
+											class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+											<input class="mdl-textfield__input" type="text" id="daterange">
+											<label class="mdl-textfield__label">Seleccione el rango</label>
+										</div>
+								</div>
+							</div>
                     </div>
                     <div class="input col-sm-2 passenger">
                         <label>Personas :</label>
@@ -234,7 +301,7 @@ $hotel=$model->listarHot();
                         </div>
                     </div>
                     <div class="col-sm-2 submit no-padding text-center">
-                        <button class="btn btn-info full-width" onclick="search()">Buscar Hotel</button>
+                        <input type="button" class="btn btn-info" value="Buscar Hotel" onclick="search()">
                         <br /><br />
                         
                         <a href="#" class="text-pink" onClick="$('.overview').slideToggle('slow')"><i class="glyphicon glyphicon-search"></i> Mas opciones</a>
@@ -243,6 +310,16 @@ $hotel=$model->listarHot();
            </div>
       </div>
     </section>
+    <section class="partner">
+               	  <div class="container">
+                      <div class="row">
+                        <div class="col-sm-3"> Compara el precio</div>
+                        <div class="col-sm-3"><a href="https://www.trivago.com.co/"><img src="assets/images/trivago.png" /></a></div>
+                        <div class="col-sm-3"><a href="https://www.booking.com/index.es.html"><img src="assets/images/booking.jpg" /></a></div>
+                        <div class="col-sm-3"><a href="https://www.kayak.com.co/"><img src="assets/images/kayak.png" /></a></div>
+                      </div>
+                  </div>
+              </section>
   
 <div id="hide" style="display: none;">
 <section class="overview" style="display:none">
@@ -384,10 +461,7 @@ $hotel=$model->listarHot();
 </section>
 <div class="clear"></div>
 <section class="search-result">
-    
-<div class="list-result col">
-    <form action="view/Reserva/reserva1.php" method="get">
-    <?php
+        <?php
     if ($hotel !=null) {
         foreach ($hotel as $dato){
 
@@ -395,10 +469,14 @@ $hotel=$model->listarHot();
             $imagen= $dato['Imagen_Hotel'];
             $direccion = $dato['Direccion_Hotel'];
             $descripcion = $dato['Descripcion_Hotel'];
+            $costo = $dato['Costo_Habitacion'];
         ?>
+<div class="list-result col">
+
+
 <div class="head">
 <div class="col-sm-11" id="nameHotel">
- <label for="" name="nameHotel"><?php echo $nombre ?></label> 
+ <label for="" name="nameHotel"><?php echo $nombre;?></label> 
 </div>
 </div>
 <div class="detail row">
@@ -413,27 +491,25 @@ $hotel=$model->listarHot();
       <?php echo $descripcion ?>
   </li>
     </ul>
-</section>
+</section>  
 <aside class="price col-sm-4">
     <div class="row">
         <div class="col-xs-5">
-            <form action="view/reserva1.html" method="post">
             <span class="coret">COP $132.000</span>
-            COP $115.000
-            <a href="view/Reserva/reserva1.php?nombre=<?php echo $nombre ?>&direccion=<?php echo $direccion ?>&descripcion=<?php echo $descripcion ?>"> Reservar</a>
+            <?php echo "COP $".$costo ?>
+            <a class="btn btn-info" href="view/Hotel/hotel.php?nombre=<?php echo $nombre ?>&direccion=<?php echo $direccion ?>&descripcion=<?php echo $descripcion ?>&costo=<?php echo $costo ?>&ingreso=2021-09-10&salida=2021-09-12&adultos=2&niños=3"> Ver disponibilidad</a>
             <!-- <button class="btn btn-info" >Reservar</button> -->
-        </form>
         </div>
-        
+     
         <div class="col-xs-7 third-party">
             <strong>Comparar:</strong>
             <a class="clearfix" href="#">
-                <img src="asset/images/booking.jpg" alt="traveloka" />
+                <img src="assets/images/booking.jpg" alt="traveloka" />
                 <span class="btn btn-sm btn-danger">COP $155.000</span>
             </a>
 
             <a class="clearfix" href="#">
-                <img src="asset/images/trivago.png" alt="tiket" />
+                <img src="assets/images/trivago.png" alt="tiket" />
                 <span class="btn btn-sm btn-danger">COP $142.000</span>
             </a>
         </div>
@@ -442,14 +518,15 @@ $hotel=$model->listarHot();
 </aside>
 </div>
 <a href="javscript:void(0)" class="icon icon-tiket-detail" data-toggle="tooltip" data-placement="top" data-title="Show Detail">&nbsp;</a>
-<?php
+
+
+</div><?php
         }
         }
         ?>
-</form>
-</div>
 </section>
 </div>
+</form>
                 
     </div></section>
 
@@ -462,15 +539,15 @@ $hotel=$model->listarHot();
                 <div class="row">
                     
                     <div class="col-sm-6 text-right p-r-40">
-                    	<h3>¿Buscas hospedaje en<span class="text-blue"> Bogotá </span>?</h3>
+                    	<h3>¿Buscas hospedaje en<span class="text-blue"> Bogotá</span>?</h3>
                         Hotelia te ayuda a buscar el hospedaje que se ajuste mejor a tus necesidades. ¿Qué esperas?
                         <div class="btn-block">
                         	<a href="#search" class="btn btn-info">Busca ahora</a>
                         </div>
                     </div>
                     <div class="col-sm-6 text-left p-l-40">
-                    	<h3>¿Porque elegir <span class="text-blue"> Hotelia </span>?</h3>
-                        Con nuestro servicio seras capaz de disfrutar de tu estadia en la capital colombiana con todo lo que mas te gusta.
+                    	<h3>¿Por qué elegir <span class="text-blue"> Hotelia</span>?</h3>
+                        Con nuestro servicio serás capaz de disfrutar de tu estadía en la capital colombiana con todo lo que más te gusta.
                         <div class="btn-block">
                         	<a href="#favSites" class="btn btn-def">Sitios populares</a>
                         </div>
@@ -483,14 +560,14 @@ $hotel=$model->listarHot();
             <div id="favSites" class="container">
             	<h3 class="title"><strong class="text-blue"> Sitios </strong> populares</h3>
                 <p>
-                    Encuentra sitios mas populares de la capital de Colombia.
+                    Encuentra los sitios más populares de la capital de Colombia.
                 </p>
              
                 <div class="row show-gallery">
                     <div class="col-md-4">
                     	<div class="col-xs-6">
                         	<div class="item small">
-                            	<img src="asset/images/route1.jpg" alt="" />
+                            	<img src="assets/images/route1.jpg" alt="" />
                                 <section class="detail">
                                 	<div class="info">
                                     	<h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -512,7 +589,7 @@ $hotel=$model->listarHot();
                         </div>
                     	<div class="col-xs-6">
                         	<div class="item small">
-                            	<img src="asset/images/route2.jpg" alt="" />
+                            	<img src="assets/images/route2.jpg" alt="" />
                                  <section class="detail">
                                 	<div class="info">
                                     	<h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -534,7 +611,7 @@ $hotel=$model->listarHot();
                         <div class="col-xs-12">
                         	<div class="item big">
                             	<span class="badge"><em>Oferta</em> 30%</span>
-                            	<img src="asset/images/route3.jpg" alt="" />
+                            	<img src="assets/images/route3.jpg" alt="" />
                                 <section class="detail">
                                 	<div class="info">
                                     	<h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -558,7 +635,7 @@ $hotel=$model->listarHot();
                     </div>
                     <div class="col-md-4">
                     	<div class="item big">
-                            <img src="asset/images/route4.jpg" alt="" />
+                            <img src="assets/images/route4.jpg" alt="" />
                              <section class="detail">
                                 <div class="info">
                                     <h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -579,7 +656,7 @@ $hotel=$model->listarHot();
                             </section>                          
                         </div>
                         <div class="item small long">
-                            <img src="asset/images/route5.jpg" alt="" />
+                            <img src="assets/images/route5.jpg" alt="" />
                              <section class="detail">
                                 <div class="info">
                                     <h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -601,7 +678,7 @@ $hotel=$model->listarHot();
                     <div class="col-md-4">
                     	<div class="col-xs-12">
                         	<div class="item big">
-                            	<img src="asset/images/route6.jpg" alt="" />
+                            	<img src="assets/images/route6.jpg" alt="" />
                                 <section class="detail">
                                 	<div class="info">
                                     	<h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -624,7 +701,7 @@ $hotel=$model->listarHot();
                         </div>
                         <div class="col-xs-6">
                         	<div class="item small">
-                            	<img src="asset/images/route7.jpg" alt="" />
+                            	<img src="assets/images/route7.jpg" alt="" />
                                 <section class="detail">
                                 	<div class="info">
                                     	<h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -645,7 +722,7 @@ $hotel=$model->listarHot();
                         </div>
                     	<div class="col-xs-6">
                         	<div class="item small">
-                            	<img src="asset/images/route8.jpg" alt="" />
+                            	<img src="assets/images/route8.jpg" alt="" />
                                  <section class="detail">
                                 	<div class="info">
                                     	<h5>Borobudur Temple <span>Jawa Tengah, Indonesia</span></h5>
@@ -697,108 +774,61 @@ $hotel=$model->listarHot();
                   </ul>
               </div>
             </section>
-                
-              <!-- <section class="partner">
-               	  <div class="container">
-                      <div class="row">
-                        <div class="col-sm-3"> Partner and Sponsor</div>
-                        <div class="col-sm-3"><a href="#"><img src="asset/images/sponsor1.png" /></a></div>
-                        <div class="col-sm-3"><a href="#"><img src="asset/images/sponsor2.png" /></a></div>
-                        <div class="col-sm-3"><a href="#"><img src="asset/images/sponsor3.png" /></a></div>
-                      </div>
-                  </div>
-              </section> -->
-                
-              <section class="news">
-               	  <span class="icon icon-glass"></span>
-                  <span class="icon separator"></span>
-               	  <div class="container">
-                   	  <div class="row">
-                          <div class="col-sm-6 text-right p-r-40">
-                           	  <div><h3 class="title"><strong class="text-blue">Comentarios</strong> Clientes</h3></div>
-                              <div class="col-md-8">
-                               	  <h5>John Doe</h5>
-                                  <em class="text-blue">Zagreb-Coratia</em>
-                                  <p>Hotelia es lo mejor.</p>
-                              </div>
-                              <figure class="col-md-4">
-                               	  <img src="asset/images/profile.jpg" class="rounded" alt="profile" />
-                              </figure>
-                          </div>
-                           <div class="col-sm-6 p-l-40">
-                           	  <div><h3 class="title">Ultimas<strong class="text-blue"> Noticias</strong></h3></div>
-                               <figure class="col-md-5">
-                               	  <img src="asset/images/news.jpg" alt="profile" />
-                              </figure>
-                              <div class="col-md-7">
-                               	  <h5>Claritas est etiam processus </h5>
-                                  <em>Posted by: Ipsum Lorem - a hours ago</em>
-                              </div>
-                              <br class="clear" />
-                              <p class="p-t-20">Dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica. Eodem modo typi, qui nunc nobis videntur.... <a href="#"> readmore </a></p>
-                          </div>
-                      </div>
-                  </div>
-              </section>
+            
+
        	  <footer>
         	<a href="#header" class="icon icon-flight"></a>
         	<div class="container">
             	<span class="icon deco"></span>
             	<div class="row">
                 	<div class="col-sm-2 text-center">
-                    	<img class="logo" src="asset/images/logo.png" alt="logo" />
+                    	<img class="logo" src="assets/images/logo.png" alt="logo" />
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                     	<ul>
-                        	<li><strong>Our Menu</strong></li>
-                            <li><a href="#">Press Center</a></li>
-                            <li><a href="#">Travel News</a></li>
-                            <li><a href="#">Best Price Guarantee</a></li>
+                        	<li><strong>Nosotros</strong></li>
+                            <li><a href="#">Quiénes somos</a></li>
+                            <li><a href="#">Cómo funcionan nuestros servicios</a></li>
                         </ul>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-sm-3">
                     	<ul>
-                        	<li><strong>Usefull Link</strong></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Travel News</a></li>
-                            <li><a href="#">Support Center</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2">
-                    	<ul>
-                        	<li><strong>Account</strong></li>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Personal Information</a></li>
-                            <li><a href="#">My Credit Slip</a></li>
+                        	<li><strong>Contactar</strong></li>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Atención al cliente</a></li>
+                            <li><a href="#">Ayuda</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 subscribe">
-                    	<strong>Subscribe</strong>
-                        <input type="email" placeholder="Your Email Address" />
-                        <input type="submit" class="btn btn-info" value="Send" />
+                    	<strong>Subscribete</strong>
+                        <input type="email" placeholder="Tu correo electronico" />
+                        <input type="submit" class="btn btn-info" value="Enviar" />
                         <div class="socmed">
-                        	Find Us : 
-                            <a href="#"><i class="icon fb"></i></a>
-                            <a href="#"><i class="icon tw"></i></a>
-                            <a href="#"><i class="icon yt"></i></a>
-                            <a href="#"><i class="icon gp"></i></a>
+                        	Encuentranos : 
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-github"></i>
                         </div>
                     </div>
                 </div>
             </div>
-            <span class="copyright">copyrights&copy;2015</span>
+            <span class="copyright">Copyright&copy;2021 │ Todos los derechos reservados</span>
         </footer>
         
     </div> <!-- /container -->        
     <script src="library/jquery-3.6.0.min.js"></script>
-		<script src="asset/js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="asset/js/jquery-ui.min.js"></script>	
-        <script src="asset/js/vendor/bootstrap.min.js"></script>
-        <script src="asset/js/bootstrap-datepicker.js"></script>	
-        <script src="asset/js/jquery.slides.min.js"></script>	
-        <script src="asset/js/jquery.colorbox.js"></script>	
-        <script src="asset/js/enquire.min.js"></script>
-        <script src="asset/js/main.js"></script>
+		<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>	
+        <script src="assets/js/vendor/bootstrap.min.js"></script>
+        <script src="assets/js/bootstrap-datepicker.js"></script>	
+        <script src="assets/js/jquery.slides.min.js"></script>	
+        <script src="assets/js/jquery.colorbox.js"></script>	
+        <script src="assets/js/enquire.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        	<!-- date and time 	 -->
+	<script src="assets/plugins/flatpicker/flatpickr.min.js"></script>
+	<script src="assets/js/pages/datetime/datetime-data.js"></script>
     </body>
 
 </html>
