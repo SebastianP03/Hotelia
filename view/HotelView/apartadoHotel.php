@@ -457,7 +457,7 @@ $ModeloHotel=new Hotel();
                                                         </button>
                                                         <ul class="dropdown-menu pull-left" role="menu">
                                                             <li>
-                                                                <a href="Actualizar.php">
+                                                                <a href="Actualizar.php?id=<?php echo $Hot['Id_Hotel'] ?>">
                                                                     <i class="material-icons">create </i> Editar </a>
                                                             </li>
                                                             <li>
@@ -467,7 +467,6 @@ $ModeloHotel=new Hotel();
                                                             <li>
                                                                 <form action="../../controller/hotelController.php" method="POST">
                                                                         <input type="hidden" name="IdEnc" value="$_SESSION['ID']">
-                                                                        <input type="hidden" name="IdHot" value="$_SESSION['HOTEL']">
                                                                         <i class="material-icons">lock</i>
                                                                         <input type="submit" value="EstadoC" name="AccionB"> Cerrar Hotel
                                                                  </form>

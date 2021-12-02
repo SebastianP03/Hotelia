@@ -46,7 +46,8 @@
     drop trigger ValidarcamposVacios;
 
 -- hotel **************************************************************************
--- infoHotel
+
+-- informacion de todos los hoteles del encargado
 	delimiter //
     create procedure proInfoHot(in IdEnc int)
     begin
@@ -68,14 +69,24 @@
 
 -- actualizar
 	delimiter //
-    create procedure proUpdateHot(in IdHot int, in NomHot varchar (80),in DirHot varchar (80), in DesHot varchar (2500),in ImaHot blob, in EstHot boolean, in IdEnc int)
+    create procedure proUpdateHot(in IdHot int, in NomHot varchar (80),in DirHot varchar (80), in DesHot varchar (2500), in IdEnc int)
 	begin
     update Hotel
-    set Nombre_Hotel=NomHot, Direccion_Hotel=DirHot, Descripcion_Hotel=DesHot, Imagen_Hotel=ImaHot, Estado=EstHot
+    set Nombre_Hotel=NomHot, Direccion_Hotel=DirHot, Descripcion_Hotel=DesHot
     where Id_Hotel=IdHot and Id_Encargado=IdEnc;
     end //
     delimiter ;
-    
+
+-- informacion de hotel especifico
+	delimiter //
+    create procedure proInfoHotEsp (in IdHot int, in IdEnc int)
+    begin
+    select * from Hotel
+    where Id_Hotel = IdHot and Id_Encargado = IdEnc;
+    end //
+    delimiter ;
+   call proInfoHotEsp (2,1);
+   
 -- estado inactivo
 	delimiter //
     create procedure proCambioInactivoHot(in IdHot int, in IdEnc int)
@@ -88,6 +99,8 @@
     
     call proCambioInactivoHot (2,1);
     call proCambioActivoHot (2,1);
+    
+    select * from hotel;
     
 -- estado activo
     delimiter //

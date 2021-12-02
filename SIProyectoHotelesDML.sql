@@ -14,8 +14,11 @@ insert into Encargado (Nombres_Encargado,Apellidos_Encargado,FechaNac_Encargado,
 delete from encargado where Id_Encargado = 4;
 --
 use siproyectohoteles;
-select * from	encargado;
+select * from encargado;
+select * from	hotel;
 select * from habitacion;
+select Imagen_Hotel from hotel where Id_Hotel = 1;
+
 select * from cliente;
 select * from hotel where Id_Hotel = 2;
 select * from tipoDocumento;
@@ -59,11 +62,16 @@ select
 
 -- 
 select * from hotel;
+select * from reserva;
 
 update hotel
 set Nombre_Hotel ="hotel mio", Direccion_Hotel="",Descripcion_Hotel=""
 where Id_Hotel = 2;
 
+SELECT * FROM hotel where Id_Hotel = 2 and Id_Encargado = 1;
 
+delete from cliente where Id_Cliente = 10;
+SELECT * FROM cliente WHERE Correo_Cliente = "sacastillo889@misena.edu.co" and Contraseña_Cliente = "clavesecreta";
 
+insert into reserva (Fecha_Reserva,FechaEntrada_Reserva,FechaSalida_Reserva,TotalApagar_Reserva,Id_Cliente)
 

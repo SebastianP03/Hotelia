@@ -21,11 +21,9 @@
         $NomHot=$_POST['NomHot'];
         $DirHot=$_POST['DirHot'];
         $DesHot=$_POST['DesHot'];
-        $ImaHot=$_POST['ImaHot'];
-        $EstHot=$_POST['EstHot'];
         $IdEnc=$_POST['IdEnc'];
 
-        $ModeloHotel->update($IdHot,$NomHot,$DirHot,$DesHot,$ImaHot,$EstHot,$IdEnc);
+        $ModeloHotel->update($IdHot,$NomHot,$DirHot,$DesHot,$IdEnc);
     }
 
     if ($accion == "EstadoA") {

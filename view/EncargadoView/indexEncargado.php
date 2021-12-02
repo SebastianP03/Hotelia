@@ -411,6 +411,24 @@ $ModeloEncargado->validateSession();
 									<!-- /.info-box -->
 								</a>
 							</div>
+							<!-- /.col -->
+							<div class="col-xl-3 col-md-6 col-12">
+								<a href="#">
+									<div class="info-box bg-success">
+										<span class="info-box-icon push-bottom"><i
+												class="material-icons">monetization_on</i></span>
+										<div class="info-box-content">
+											<span class="info-box-text">Realizar</span>
+											<span class="info-box-number">Reporte</span>
+											<div class="progress">
+												<div class="progress-bar width-50"></div>
+											</div>
+										</div>
+										<!-- /.info-box-content -->
+									</div>
+									<!-- /.info-box -->
+								</a>
+							</div>
 						</div>
 					</div>
 					<!-- end widget -->
