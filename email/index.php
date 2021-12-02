@@ -21,12 +21,11 @@ $oMail->Password="hotelia2242742";
 $oMail->setFrom("hoteliabogota@gmail.com","Hotelia S.A");
 $oMail->addAddress("jyntexx@gmail.com","Cliente");
 $oMail->Subject="Reserva exitosa";
-$oMail->msgHTML('
-<section class="row e-ticket step-content text-center">
+$oMail->msgHTML('<section class="row e-ticket step-content text-center">
 <div class="col-md-8 ">
     <div class="tiles-white row">
         <h3 class="tiles-title">
-            <strong class="text-blue">Exito.</strong> Tu reserva se ha realizado.
+            <strong class="text-blue" style="color: red;">Exito.</strong> Tu reserva se ha realizado.
         </h3>
         <div class="alert alert-info">
            Se ha enviado un correo con la informacion de tu reserva.
