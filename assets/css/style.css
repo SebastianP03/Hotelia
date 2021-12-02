@@ -1,0 +1,249 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    font-family:Cambria;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.dropdown ul{
+    font-size: 16px;
+    overflow: hidden;
+    max-height: 0px;
+    transition: all 0.4s;
+    position: absolute;
+}
+
+.dropdown:hover ul{
+    max-height: 400px;
+    display:block;
+    background-color: white;
+    right: 15px;
+    width: 15%;
+}
+.dropdown-menu li {
+    margin: 0;
+    padding: 8px 15px;
+    transition: all 150ms ease-in;
+}
+
+.dropdown-menu li:hover{
+    background: whitesmoke;
+}
+
+.container{
+   width: 95%;
+   margin: auto; 
+}
+
+.nav-main{
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 20px 0px;
+}
+
+.nav-logo{
+    width: 50px;
+}
+
+.nav-login{
+    width: 30px; 
+}
+
+.nav-main ul{
+    display: flex;
+}
+
+.nav-main ul li{
+    padding: 10px;
+}
+
+.nav-main ul.nav-menu{
+    margin-right: 10px;
+}
+
+.fa-user{
+    padding: 12px 0px;
+}
+
+.banner{
+    background: gainsboro;
+    display: flex;   
+    text-align: center; 
+}
+
+.banner p{
+    padding: 10px 0px;
+}
+
+.text{
+    color: black;
+    background: white;
+    margin: 0px auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    border: black 2px solid;
+    border-radius: 16px;
+    padding: 10px 10px;
+}
+
+.hotelSearch{
+    background: whitesmoke;
+}
+
+.search{
+    margin: 100px;
+    width: 35%;
+    height: 40px;
+    font-size: 15px;
+    font-family: Georgia;
+    text-indent: 10px;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 501; 
+    margin-right: 5px;
+    border-radius: 28px;
+    outline: none;
+}
+
+
+.fechaI {
+    width: 15%;
+    height: 40px;
+    border-radius: 28px;
+    outline: none;
+}
+
+.fechaF {
+    width: 15%;
+    height: 40px;
+    border-radius: 28px;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: white;
+    color: black;
+    padding: 10px 40px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 28px;
+    transition-duration: 0.4s;
+  }
+
+.btn-primary:hover {
+    background-color: black;
+    color: white;
+  }
+
+.row-img{
+text-align: center;
+background: gainsboro;
+}
+
+.row-img img{
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+.container-footer{
+    width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    background: #24262b; 
+    padding: 70px 0px;
+    line-height: 2;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0px 15px;
+}
+
+.footer-col h4{
+    font-size: 17px;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 80px;
+}
+
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+    color: white;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin-right: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: white;
+}
+
+@media (max-width: 767px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+

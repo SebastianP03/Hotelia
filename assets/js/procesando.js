@@ -1,0 +1,1 @@
+setTimeout( function() { window.location.href = "../Reserva/reserva3.php"; }, 4000 );
