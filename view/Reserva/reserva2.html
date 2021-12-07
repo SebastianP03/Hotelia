@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Hotelia</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/jquery-ui.css">
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../assets/fonts/flaticon.css">
+        <link rel="stylesheet" href="../../assets/css/mobile.css" />
+
+        <script src="../../assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    </head>
+    <body>
+        <div class="login-popup cb-popup" id="login-block">
+        	
+            <div class="wrap-register">
+
+              <h2 class="title"><i class="glyphicon glyphicon-user"></i> LOGIN</h2>
+              <div class="social-login clearfix">
+                <a href="#" class="btn-login facebook">Conectar con facebook</a>
+                <a href="#" id="signInButton" class="btn-login google">Conectar con google</a>
+              </div>
+
+              <div class="line-or"><div class="text-or">O</div></div>
+              <div class="clear"></div>
+              <form method="POST" action="" accept-charset="UTF-8"><input name="_token" type="hidden" value="k5dNpcDie87dqH4093X4P3Do2WFmaArP3FsGmom6">
+                  <div class="form-group">
+                      <input type="text" class="icon-a icon-a-user form-control" autocomplete="off" id="email"name="email" placeholder="Correo">
+                  </div>
+
+
+
+                  <!-- sample input id warning -->
+                  <div class="form-group">
+                      <input type="password" id="password" class="icon-a icon-a-lock form-control" name="password" placeholder="Contraseña">
+                      <div class="forgot">Olvidaste tu <a href="http://webfographics.com/forgot-password">contraseña</a></div>
+                  </div>
+
+                  <div class="form-group text-title" style="display: none;">
+                      <input type="checkbox" name="remember_me">Recuerdame
+                  </div>
+
+                  <input type="text" hidden="hidden" id="os" name="os">
+                  <input type="text" hidden="hidden" id="browser" name="browser">
+
+                  <div class="top-warning "></div>
+
+                <div class="btn-block">
+                  <button type="submit" class="btn btn-danger btn-lg">LOGIN</button>
+                  <span id="pass_hide" hidden="hidden">hide</span>
+                  <div class="member-wrap">
+                      <span>¿No estas registrado?</span> <a class="login-now" href="http://webfographics.com/register">Registrate ahora</a>
+                  </div>
+                </div>
+          </form>
+        </div>
+        
+    </div>
+    
+    <div class="main-wrap">
+      <header class="mini-header">
+              <a class="menu glyphicon glyphicon-align-justify" href="#"></a>
+            <a class="logo" href="#">
+                <img src="../../assets/images/logo.png" alt="logo" />
+            </a>
+             <a class="search glyphicon glyphicon-search" href="#"></a>
+      </header>
+      
+         <header class="main-header" id="header">
+            <div class="top clearfix">
+                <div class="container">
+                    <ul class="pull-left contact-info">
+                        <li><i class="glyphicon glyphicon-envelope"></i> info@stravel.com</li>
+                        <li><i class="glyphicon glyphicon-phone"></i> +62903244222</li>
+                    </ul>
+                    <ul class="pull-right">
+                        <li class="user">
+                            <a class="btn btn-link" id="login_btn">Login</a>
+                            <a class="btn btn-danger">Register</a>
+                        </li>
+                        <li class="separator"></li>
+                        <li class="dropdown lang">
+                            <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                <img src="../../assets/images/colombia.png" alt=""/>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="drop2">
+                                <li><a href="#"><img src="../../assets/images/colombia.png" alt=""/> Español</a></li>
+                                <li><a href="#"><img src="../../assets/images/usa.png" alt=""/> English</a></li>
+                            </ul>
+                        </li>
+                        <li class="separator"></li>
+                        <li class="dropdown money">
+                            <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                (COP) Pesos colombianos
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="drop2">
+                                <li><a href="#">(COP) Pesos colombianos</a></li>
+                                <li><a href="#">($) US Dollar</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                
+                <div class="main-menu">
+                	<div class="container">
+                    	<a href="#" class="cur pull-left">
+                            <span class="text-blue text-big">Flight Ticket</span>
+                            More than <strong class="text-blue">1020</strong> Destination
+                        </a>
+                        <a href="#" class="pull-left">
+                            <span class="text-blue text-big">Traveling Promo</span>
+                            More than <strong class="text-blue">1020</strong> Promo's
+                        </a>
+                        <a class="logo" href="../../index.php">
+                            <img src="../../assets/images/logo.png" alt="logo" />
+                        </a>
+                        <a href="#" class="pull-right">
+                            <span class="text-blue text-big">Help And Support</span>
+                            Duis autem vel eum iriue
+                        </a>
+                        <a href="#" class="pull-right">
+                            <span class="text-blue text-big">News And Article</span>
+                            Lorem Ipsum dolor sit amet
+                        </a>
+                    </div>
+                </div>
+                <span class="glyphicon glyphicon-align-justify">&nbsp;</span>
+            </header>
+        	<!-- InstanceBeginEditable name="yieldyu" -->
+            <div class="container">
+            	<ul class="breadcrumb">
+                    <li><a href="../../index.php">Home</a></li>
+                    <li><a href="#">Flight Ticket</a></li>
+                    <li><a href="#">Pemesanan</a></li>
+                </ul>
+                
+                <div class="row">
+                	<div class="step col-md-8">
+                        <ul class="clearfix">
+                            <li class="done">
+                                <span class="tooltip-s">Datos</span>
+                                <span class="number">1</span>
+                            </li>
+                            <li class="cur">
+                                <span class="tooltip-s">Pago</span>
+                                <span class="number">2</span>
+                            </li>
+                            <li>
+                                <span class="tooltip-s">Ticket</span>
+                                <span class="number">3</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <section class="row step-content">
+                	<div class="col-md-8">
+                    	<div class="tiles-white row">
+                            <h3 class="tiles-title">
+                            	Seleccione el metodo de <strong class="text-blue">pago</strong>
+                            </h3>
+                            <form action="" class="form-group clearfix">
+                                <div class="nav-pay">
+                                    <div class="col-sm-4 text-center">
+                                        <img src="../../assets/images/credito.jpg" alt="" />
+                                        <a href="#atm" class="btn btn-info"><i class="glyph-icon flaticon-buy11"></i> Tarjeta de credito</a>
+                                    </div>
+                                <div class="col-sm-4 text-center">
+                                    <img src="../../assets/images/debito.jpg" alt="" />
+                                    <a href="#cc" class="btn btn-def"><i class="glyph-icon flaticon-credit2"></i> Tarjeta debito</a>
+                                </div>
+                                <div class="col-sm-4 text-center" style="margin-bottom: 20px;">
+                                <img src="../../assets/images/nequi.jpg" alt="" />
+                                <a href="#klik" class="btn btn-def"><i class="glyph-icon flaticon-write49"></i> Nequi</a>
+                                </div>
+                            </div>
+                                <section class="pay-content">
+                                	<div id="klik" style="display:none">
+                                    	<h5 class="title-line">Nequi</h5>
+                                        <p>Ingrese los datos de su cuenta nequi</p>
+                                    	<div class="alert alert-info m-t-30 m-b-40">
+                                         El pago se realizara cuando usted ya se encuentre en el hotel
+                                        </div>
+                                        <div class="input col-sm-8">
+                                            <label>Nombre del titular de la cuenta :</label>
+                                            <input type="text" class="icon-a icon-a-user" placeholder="Nombre del usuario" />
+                                            <span class="help-block">El usuario que va a realizar el pago </span>
+                                        </div>
+                                         <div class="img-method col-sm-4 text-center">
+                                           <img src="../../assets/images/nequi.jpg" alt="" />
+                                        </div>
+                                        <div class="input col-sm-6">
+                                            <label>Numero de la cuenta:</label>
+                                            <input type="text" class="icon-a icon-a-lock" placeholder="Numero de la cuenta" />
+                                            <span class="help-block"></span>
+                                        </div>
+                                        <div class="input col-sm-6">
+                                            <label>Confirmar numero :</label>
+                                            <input type="text" class="icon-a icon-a-lock" placeholder="Confirmar numero de la cuenta">
+                                            <span class="help-block">El numero debe coincidir </span>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="list">
+                                            <h5 class="title-line">Informacion</h5>
+                                            <ul>
+                                                <li>El pago se realizara una vez el usuario se encuentre en el hotel.</li>
+                                                <li>Recuerde tener el valor total de la reserva.</li>
+                                                <li>Hotelia no se hace responsable si sus datos son erroneos. </li>
+                                                <li>Recuerde que el pago se realizara por el metodo que usted ha elegido.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div id="cc" style="display:none">
+                                    	<h5 class="title-line">Tarjeta debito</h5>
+                                        <p>Ingrese los datos que se piden en su totalidad</p>
+                                        <div class="alert alert-info m-t-30 m-b-40">
+                                            El hotel no puede solicitar mas datos de los otorgados. No brinde informacion adicional.
+                                        </div>
+                                        <div class="input col-sm-8">
+                                            <label>Numero de la tarjeta:</label>
+                                            <input type="text" class="icon-a icon-a-lock" placeholder="Numero sin espacios" />
+                                            <span class="help-block">Verifique que esten correctos</span>
+                                        </div>
+                                         <div class="img-method col-sm-4 text-center">
+                                           <img src="../../assets/images/debito.jpg" alt="" />
+                                        </div>
+                                        <div class="input col-sm-6">
+                                            <label>Fecha de caducidad</label>
+                                            <div class="row">
+                                            	<div class="col-xs-6">
+                                                    <select class="input-sm">
+                                                        <option>Eliga el mes</option>
+                                                        <option>01-Ene</option>
+                                                        <option>02-Feb</option>
+                                                        <option>03-Mar</option>
+                                                        <option>04-Abr</option>
+                                                        <option>05-May</option>
+                                                        <option>06-Jun</option>
+                                                        <option>07-Jul</option>
+                                                        <option>08-Ago</option>
+                                                        <option>09-Sep</option>
+                                                        <option>10-Oct</option>
+                                                        <option>11-Nov</option>
+                                                        <option>12-Dic</option>
+                                                    </select>
+                                                </div>
+                                                 <div class="col-xs-6">
+                                                    <select class="input-sm">
+                                                        <option>Eliga el año</option>
+                                                        <option>2021</option>
+                                                        <option>2022</option>
+                                                        <option>2023</option>
+                                                        <option>2024</option>
+                                                        <option>2025</option>
+                                                        <option>2026</option>
+                                                        <option>2027</option>
+                                                    </select>
+                                                 </div>
+                                            </div>
+                                            <span class="help-block">La fecha no puede ser posterior a la actual</span>
+                                        </div>
+                                        <div class="input col-sm-6">
+                                            <label>CVV 4 digitos :</label>
+                                            <div class="col-xs-5 no-margin no-padding">
+                                            	<input type="text" class="icon-a icon-a-lock" placeholder="CCV">
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="input col-sm-6">
+                                            <label>Nombre del titular :</label>
+                                            <input type="text" class="icon-a icon-a-user" placeholder="Nombre del titular de la tarjeta" />
+                                            <span class="help-block">Recuerde que es el nombre del titular de la tarjeta</span>
+                                        </div>
+                                        <div class="clear"></div>
+                                        <div class="list">
+                                            <h5 class="title-line">Informacion</h5>
+                                            <ul>
+                                                <li>El pago se realizara una vez el usuario se encuentre en el hotel.</li>
+                                                <li>Recuerde tener el valor total de la reserva.</li>
+                                                <li>Hotelia no se hace responsable si sus datos son erroneos. </li>
+                                                <li>Recuerde que el pago se realizara por el metodo que usted ha elegido.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="atm">
+                                    	<h5 class="title-line">Tarjeta de credito</h5>
+                                        <p>Ingrese los datos que se piden en su totalidad</p>
+                                        <div class="alert alert-warning m-t-30 m-b-40">
+                                            <strong>El hotel no puede solicitar mas datos de los otorgados.</strong> No brinde informacion adicional.
+                                        </div>
+                                        <div class="bold col-sm-12 text-danger">
+                                        	<h4>Fuera de servicio</h4>
+                                            <p>El hotel no dispone de esta opcion. <a href="#">Mas informacion</a>.</p>
+                                        </div>
+                                        
+                                    </div>
+                                </section>
+                            </form>
+                       </div>
+                       
+                       <div class="tiles-blue-sky">
+                       		<div class="row">
+                            	<section class="col-sm-6 form-group clearfix">
+                                	<h5><strong>¿Dispone de un cupon?</strong></h5>
+                                    <div class="input m-t-20 m-b-20">
+                                        <label>Codigo del cupon:</label>
+                                        <input type="text" class="icon-a icon-a-kupon" placeholder="Codigo" />
+                                        <span class="help-block">El codigo debe ser valido y no haber expirado</span>
+                                        <a href="#" class="btn btn-danger">Mas informacion</a>
+                                    </div>
+                                </section>
+                                <section class="col-sm-6">
+                                	<h5><strong>Detalle del descuento</strong></h5>
+                                    <ul class="price-list">
+                                        <li class="clearfix">Lorem Airlines (Adult) x1	<span class="price">Rp <strong>623.500</strong></span></li>
+                                        <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>0</strong></span></li>
+                                        <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>0</strong></span></li>
+                                        <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>0</strong></span></li>
+                                        <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>20.000</strong></span></li>
+                                        <li class="separator"></li>
+                                        <li class="total clearfix">Total <span class="price">Rp <strong>643.012</strong></span></li>
+                                    </ul>
+                                    <p>
+                                    	Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
+                                    </p>
+                                </section>
+                            </div>
+                       </div>
+                    </div>
+                    <aside class="col-md-4">
+                    	<div class="tiles-white no-padding">
+                        	<div class="timer">
+                            	Batas waktu pemesanan
+                                <strong>1 Hours 30 Minute</strong>
+                                <span>Monday. 27 Juli 2015 Pukul 18:14</span>
+                            </div>
+                            <h4 class="bold p-l-20 p-r-20 p-b-10">Order Number :		<span class="text-blue m-l-20">2432238094</span></h4>
+                        </div>
+                    
+                    	<div class="tiles-blue-dark">
+                        	<h4><i class="icon info-icon"></i> Important</h4>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
+                        </div>
+                    
+                    	<div class="tiles-white collapsed titled">
+                        	<div class="head"><span><i class="icon arrow-down"></i> Price Detail</span></div>
+                            <ul class="price-list">
+                            	<li class="clearfix">Lorem Airlines (Adult) x1	<span class="price">Rp <strong>623.500</strong></span></li>
+                                <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>0</strong></span></li>
+                                <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>0</strong></span></li>
+                                <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>0</strong></span></li>
+                                <li class="clearfix">Bagasi (Adult) CGK-DPS	<span class="price">Rp <strong>20.000</strong></span></li>
+                                <li class="separator"></li>
+                                <li class="total clearfix">Total <span class="price">Rp <strong>643.012</strong></span></li>
+                            </ul>
+                            <p class="alert alert-warning">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh </p>
+                        </div>
+                        
+                        <div class="tiles-white collapsed titled">
+                        	<div class="head"><span><i class="icon arrow-down"></i> Flight Detail</span></div>
+                           	<div class="list-result">
+                            	<div class="detail">
+                                	<section class="timeline">
+                                        <ul class="row-5 clearfix">
+                                            <li class="place">
+                                                Jakarta
+                                                <time class="icon-a icon-a-plane-up">18:00</time>
+                                            </li>
+                                            <li class="provider">
+                                                <span class="duration">5h 10m</span>
+                                                <img src="img/american_airlines.png">
+                                                Lorem Airlines<br>QPR 227
+                                            </li>
+                                            
+                                            
+                                            <li class="place">
+                                                Semarang
+                                                <time class="icon-a icon-a-plane-down">06:00 <br><br>(+1H)</time>
+                                            </li>
+                                        </ul>
+                                        
+                                    </section>
+                                </div>
+                                
+                                <div class="detail">
+                                	<section class="timeline">
+                                        <ul class="row-5 clearfix">
+                                            <li class="place">
+                                                Semarang
+                                                <time class="icon-a icon-a-plane-up">18:00</time>
+                                            </li>
+                                            <li class="provider">
+                                            	<span class="duration">5h 10m</span>
+                                                <img src="img/qatar_airlines.png">
+                                                Lorem Airlines<br>QPR 227
+                                            </li>
+                                            <li class="place">
+                                                Bali
+                                                <time class="icon-a icon-a-plane-down">06:00 <br><br>(+1H)</time>
+                                            </li>
+                                        </ul>
+                                        
+                                    </section>
+                                </div>
+                                
+                              <div class="text-center">
+                                	Total : <span class="label label-danger"> 7 hours 10 Minutes</span>
+                                    <p class="help-block"> All are local time of the airport</p>
+                              </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tiles-white titled">
+                        	<div class="head"><span><i class="icon arrow-down"></i> Passenger</span></div>
+                            <div class="head2 clearfix">
+                                <h4 class="col-xs-9">
+                                    <span class="number-round m-t-10">1</span>
+                                    Ms<br>
+                                    <strong>Jane Doe</strong>
+                                </h4>
+                                <div class="col-xs-3 text-center m-t-10">
+                                    <i class="icon dewasa-icon"></i>
+                                    <span class="text-small">(Adult)</span>
+                                </div>
+                            </div>
+                            <ul class="p-b-20">
+                                <li><label class="col-sm-10">Baggage to Jakarta</label>15 Kg</li>
+                                <li><label class="col-sm-10">Baggage to Jakarta</label>15 Kg</li>
+                            </ul>
+                            <br />
+                            <div class="head2 clearfix">
+                                <h4 class="col-xs-9">
+                                    <span class="number-round m-t-10">1</span>
+                                    Ms<br>
+                                    <strong>Jane Doe</strong>
+                                </h4>
+                                <div class="col-xs-3 text-center m-t-10">
+                                    <i class="icon dewasa-icon"></i>
+                                    <span class="text-small">(Adult)</span>
+                                </div>
+                            </div>
+                            <ul class="p-b-20">
+                                <li><label class="col-sm-10">Baggage to Jakarta</label>15 Kg</li>
+                                <li><label class="col-sm-10">Baggage to Jakarta</label>15 Kg</li>
+                            </ul>
+                            <br />
+                        </div>
+                        
+                    </aside>
+                </section>
+                <section class="col-md-8 no-padding">
+                	<div class="tiles-white no-margin titled clearfix row">
+                        <p class="col-sm-9 p-t-10">
+                            Haciendo click en el boton usted acepta la<a href="#"> Política de Privacidad y Condiciones de Uso</a> de <a href="#"> Hotelia </a>
+                        </p>
+                        <div class="col-sm-3 text-center">
+                            <br />
+                            <a href="reserva2Proceso.html" class="btn btn-info btn-lg">Seguir</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+        	<!-- InstanceEndEditable -->
+        	<footer>
+        	<a href="#header" class="icon icon-flight"></a>
+        	<div class="container">
+            	<span class="icon deco"></span>
+            	<div class="row">
+                	<div class="col-sm-2 text-center">
+                    	<img class="logo" src="../../assets/images/logo.png" alt="logo">
+                    </div>
+                    <div class="col-sm-2">
+                    	<ul>
+                        	<li><strong>Our Menu</strong></li>
+                            <li><a href="#">Press Center</a></li>
+                            <li><a href="#">Travel News</a></li>
+                            <li><a href="#">Best Price Guarantee</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                    	<ul>
+                        	<li><strong>Usefull Link</strong></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Travel News</a></li>
+                            <li><a href="#">Support Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2">
+                    	<ul>
+                        	<li><strong>Account</strong></li>
+                            <li><a href="#">My Account</a></li>
+                            <li><a href="#">Personal Information</a></li>
+                            <li><a href="#">My Credit Slip</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 subscribe">
+                    	<strong>Subscribe</strong>
+                        <input type="email" placeholder="Your Email Address">
+                        <input type="submit" class="btn btn-info" value="Send">
+                        <div class="socmed">
+                        	Find Us : 
+                            <a href="#"><i class="icon fb"></i></a>
+                            <a href="#"><i class="icon tw"></i></a>
+                            <a href="#"><i class="icon yt"></i></a>
+                            <a href="#"><i class="icon gp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="copyright">copyrights©2015</span>
+        </footer>
+        
+    </div> <!-- /container -->        
+		<script src="../../assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="../../assets/js/jquery-ui.min.js"></script>	
+        <script src="../../assets/js/vendor/bootstrap.min.js"></script>
+        <script src="../../assets/js/bootstrap-datepicker.js"></script>	
+        <script src="../../assets/js/jquery.slides.min.js"></script>	
+        <script src="../../assets/js/jquery.colorbox.js"></script>	
+        <script src="../../assets/js/enquire.min.js"></script>
+        <script src="../../assets/js/main.js"></script>
+        <!-- InstanceBeginEditable name="js_custom" -->
+        <script>
+			$('.nav-pay a').click(function(){
+				$('.nav-pay a').removeClass('btn-info').addClass('btn-def');	
+				$(this).removeClass('btn-def').addClass('btn-info');
+				var target = $(this).attr('href');
+				$('.pay-content > div').hide();
+				$(target).show();
+			});
+        </script>
+		<!-- InstanceEndEditable -->
+    </body>
+<!-- InstanceEnd --></html>

@@ -34,13 +34,12 @@ class Hotel extends Conexion{
             }
     }
 
-    public function update($IdHot,$NomHot,$DirHot,$DesHot,$EstHot,$IdEnc){
-        $statement=$this->db->prepare('CALL proUpdateHot(:IdHot,:NomHot,:DirHot,:DesHot,:EstHot,:IdEnc)');
+    public function update($IdHot,$NomHot,$DirHot,$DesHot,$IdEnc){
+        $statement=$this->db->prepare('CALL proUpdateHot(:IdHot,:NomHot,:DirHot,:DesHot,:IdEnc)');
             $statement->bindparam(':IdHot',$IdHot);
             $statement->bindparam(':NomHot',$NomHot);
             $statement->bindparam(':DirHot',$DirHot);
             $statement->bindparam(':DesHot',$DesHot);
-            $statement->bindparam(':EstHot',$EstHot);
             $statement->bindparam(':IdEnc',$IdEnc);
         if ($statement->execute()) {
             header('Location:../view/HotelView/apartadoHotel.php');
@@ -74,6 +73,21 @@ public function listarHot(){
         $rows[]=$result;
     }
     return $rows;
+}
+
+
+public function getIdHotelEspecifico ($IdEnc,$IdHot){
+    $rows=null;
+    $statement=$this->db->prepare('CALL proInfoHotEsp(:idEnc,:IdHot);');
+    $statement->bindparam(':idEnc',$IdEnc);
+    $statement->bindparam(':IdHot',$IdHot);
+    $statement->execute();
+    while ($result=$statement->fetch()) {
+        $rows[]=$result;
+    }
+    return $rows;
+
+
 }
 
 

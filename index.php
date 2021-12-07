@@ -174,7 +174,8 @@ $hotel=$model->listarHot();
                 	<div class="container">
                     	<a href="#" class="cur pull-left">
                             <span class="text-blue text-big">Hotelia</span>
-                            Nuestros <strong class="text-blue">servicios</strong>
+                            Nuestros <strong class="text-blue">servicios</strong><a href="login.html">
+										<i class="icon-logout"></i> 
                         </a>
                         <a href="#" class="pull-left">
                             <span class="text-blue text-big">Popular</span>

@@ -51,4 +51,23 @@
     }
 
 
+    if ($accion=="Reporte") {
+        $Rango=$_POST['Rango'];
+        if ($Rango=="1") {
+            header('Location:../view/EncargadoView/ReporteHotelia.php?Rango=7');
+        }else if ($Rango=="2") {
+            header('Location:../view/EncargadoView/ReporteHotelia.php?Rango=30');
+        }else if ($Rango=="3") {
+            header('Location:../view/EncargadoView/ReporteHotelia.php?Rango=365');
+        }
+    }
+
+    if ($accion=="Oferta") {
+        $ModeloEncargado= new Encargado();
+        $IdHab=$_POST['IdHab'];
+        $CosHab=$_POST['CosHab'];
+
+        $ModeloEncargado->oferta($IdHab,$CosHab);
+    }
+
 ?>

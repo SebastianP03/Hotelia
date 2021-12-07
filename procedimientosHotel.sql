@@ -41,9 +41,34 @@
     end //
     delimiter ;
     
-    call proUpdateEnc("1","steven andres","Castillo Barrera","3107853605","sacastillo889@misena.edu.co","clavesecreta");
+--    call proUpdateEnc("1","steven andres","Castillo Barrera","3107853605","sacastillo889@misena.edu.co","clavesecreta");
     
-    drop trigger ValidarcamposVacios;
+	delimiter //
+    create procedure proReporte(in IdEnc int,in Rango int)
+    begin
+
+		select
+		res_hab.Id_Reserva,res_hab.Id_Habitacion,res_hab.Cantidad_Personas_Reserva_Habitacion,
+		res_hab.Cantidad_Adultos_Reserva_Habitacion ,res_hab.Cantidad_Niños_Reserva_Habitacion,
+
+		res.FechaEntrada_Reserva,res.FechaSalida_Reserva,res.TotalApagar_Reserva,
+
+		hot.Nombre_Hotel,
+
+		cli.Nombres_Cliente, cli.Apellidos_Cliente,cli.Telefono_Cliente,cli.Correo_Cliente
+
+		from reserva_habitacion as res_hab
+		inner join reserva as res on res_hab.Id_Reserva = res.Id_Reserva
+		inner join habitacion as hab on res_hab.Id_Habitacion = hab.Id_Habitacion
+        inner join cliente as cli on res.Id_Cliente = cli.Id_Cliente
+		inner join hotel as hot on hab.Id_Hotel = hot.Id_Hotel
+		inner join Encargado as enc on hot.Id_Encargado = enc.Id_Encargado
+		where enc.Id_Encargado = IdEnc and res.FechaEntrada_Reserva between DATE_SUB(NOW(),INTERVAL Rango day) and Date(now());
+
+    end //
+    delimiter ;
+    
+    
 
 -- hotel **************************************************************************
 
@@ -85,7 +110,7 @@
     where Id_Hotel = IdHot and Id_Encargado = IdEnc;
     end //
     delimiter ;
-   call proInfoHotEsp (2,1);
+ --  call proInfoHotEsp (2,1);
    
 -- estado inactivo
 	delimiter //
@@ -97,8 +122,8 @@
     end //
     delimiter ;
     
-    call proCambioInactivoHot (2,1);
-    call proCambioActivoHot (2,1);
+   -- call proCambioInactivoHot (2,1);
+   -- call proCambioActivoHot (2,1);
     
     select * from hotel;
     
@@ -122,8 +147,21 @@
     where Id_Encargado = IdEnc;
     end //
     delimiter ;
-	
- drop procedure proCambioFoto;
+    
+    delimiter //
+    create procedure proReservasHotel (in IdEnc int)
+    begin
+select res.Id_Reserva, cli.Nombres_Cliente, cli.Apellidos_Cliente, res.FechaEntrada_Reserva, res.FechaSalida_Reserva, res.Estado_Reserva, cli.Telefono_Cliente,ResHab.Id_Habitacion
+from reserva as res
+inner join reserva_habitacion as ResHab on res.Id_Reserva = ResHab.Id_Reserva
+inner join cliente as cli on res.Id_Cliente = cli.Id_Cliente
+inner join habitacion as hab on ResHab.Id_Habitacion = hab.Id_Habitacion
+inner join hotel as hot on hab.Id_Hotel = hot.Id_Hotel
+inner join Encargado as enc on hot.Id_Encargado = enc.Id_Encargado
+		where enc.Id_Encargado = 1 and res.FechaEntrada_Reserva between DATE_SUB(NOW(),INTERVAL 30 day) and Date(now());
+    end //
+    delimiter ;
+	drop procedure proReservasHotel;
 -- habitacion **************************************************************************
 
 delimiter //
@@ -132,5 +170,4 @@ begin
 select * from habitacion
 where Id_Hotel = idHot;
 end //
-delimiter ;
-drop procedure proInfoHab;
+delimiter ; 

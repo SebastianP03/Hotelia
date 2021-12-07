@@ -20,6 +20,6 @@
     
         //modelo hotel realiza la funcion llamada update lo cual le pasa  parametros
 
-        $Modeloservicio->update($IdSer,$NomSer);
+        $ModeloServicio->update($IdSer,$NomSer);
     }
 ?>

@@ -20,9 +20,9 @@ class Servicio extends Conexion{
             $statement->bindparam(':NomSer',$NomSer);
            
             if ($statement->execute()) {
-                header('Location:../view/servicio.php');
+               header('Location:../view/Servicio/servicio.php');
             }else{
-                header('Location:../view/servicio.php');
+                header('Location:../view/Servicio/servicio.php');
             }
     }
 //funcion update para ejecutar necesita de unos datos 
@@ -35,9 +35,9 @@ class Servicio extends Conexion{
         $statement->bindparam(':NomSer',$NomSer);
           
         if ($statement->execute()) {
-           header('Location:../view/servicio.php');
+           header('Location:../view/Servicio/servicio.php');
         }else{
-           header('Location:../view/servicio.php');
+           header('Location:../view/Servicio/servicio.php');
 
       }
 

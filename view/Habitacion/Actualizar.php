@@ -5,7 +5,7 @@ require_once('../../model/hotelModel.php');
 $ModeloEncargado= new Encargado();
 $ModeloEncargado->validateSession();
 $ModeloHabitacion=new Habitacion();
-$Habitacion=$ModeloHabitacion->listar($_SESSION['IDHOTEL']);
+//$Habitacion=$ModeloHabitacion->listar($_SESSION['IDHOTEL']);
 $idHab=$_GET['id'];
 ?>
 <!doctype html>
@@ -95,6 +95,7 @@ $idHab=$_GET['id'];
                             <h3 class="tiles-title">Datos de <strong class="text-blue">Habitacion</strong> </h3>
                             
                                                       <?php
+                                                      
                                   $Habitacion=$ModeloHabitacion->getIdHab($idHab);
                                   if ($Habitacion !=null) {
                                       foreach ($Habitacion as $Hab) {
@@ -102,6 +103,7 @@ $idHab=$_GET['id'];
                             <form action="../../controller/habitacionController.php" method="POST" class="form-group">
                             <input type="hidden" name="IdHab" value="<?php echo $_GET['id']?>">
                                 <div class="row">
+
                                     <div class="input col-sm-6">
                                         <label>Descripcion :</label>
                                         <input type="text" class="icon-a icon-a-user" name="DesHab" value="<?php echo $Hab['Descripcion_Habitacion']?>">
@@ -115,7 +117,7 @@ $idHab=$_GET['id'];
                                 <div class="row">
                                   	<div class="input col-sm-6">
                                         <label>Imagen :</label>
-                                        <input type="text" name="ImaHab" value="<?php echo $Hab['Imagen_Habitacion']?>">
+                                       <!--- <input type="text" name="ImaHab" value="<?php //echo $Hab['Imagen_Habitacion']?>">--->
                                     </div>
                                      <div class="input col-sm-6">
                                         <label>Costo :</label>

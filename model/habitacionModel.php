@@ -30,9 +30,9 @@ class Habitacion extends Conexion{
             //$statement->bindparam(':IdReh',$IdReh);
 
             if ($statement->execute()) {
-                header('Location:../view/habitacion/habitacion.php');
+               header('Location:../view/habitacion/habitacion.php');
             }else{
-                header('Location:habitacion.php');
+              header('Location:habitacion.php');
             }
     }
 
@@ -47,9 +47,9 @@ class Habitacion extends Conexion{
             $statement->bindparam(':CosHab',$CosHab);
 
             if ($statement->execute()) {
-                header('Location:../view/habitacion/habitacion.php');
+                header('Location:../view/Habitacion/habitacion.php');
             }else{
-                header('Location:../view/habitacion/habitacion.php');
+                header('Location:../view/Habitacion/habitacion.php');
             }
     }
 

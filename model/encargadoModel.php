@@ -27,7 +27,7 @@ class Encargado extends Conexion{
     
     public function validateSession(){
         if ($_SESSION['ID']==null) {
-            header('Location:../index.php');
+            header('Location:../../index.php');
         }
     }
 
@@ -45,7 +45,7 @@ class Encargado extends Conexion{
             if($statement->execute()){
                 header('Location:../view/EncargadoView/indexEncargado.php');
             }else{
-                header('Location:../view/signup.php');
+                header('Location:../../index.php');
             }
     }
 
@@ -83,5 +83,60 @@ class Encargado extends Conexion{
     }
 
 
+    public function Reporte($IdEnc,$Rango){
+        $rows=null;
+        $statement=$this->db->prepare('call proReporte (:IdEnc,:Rango);');
+        $statement->bindparam(':IdEnc',$IdEnc);
+        $statement->bindparam(':Rango',$Rango);
+        $statement->execute();
+        while ($result=$statement->fetch()) {
+            $rows[]=$result;
+        }
+        return $rows; 
+    }
+
+    public function ReservasHotel($IdEnc){
+        $rows=null;
+        $statement=$this->db->prepare('call proReservasHotel (:IdEnc);');
+        $statement->bindparam(':IdEnc',$IdEnc);
+        $statement->execute();
+        while ($result=$statement->fetch()) {
+            $rows[]=$result;
+        }
+        return $rows; 
+    }
+
+    public function listarHabitaciones($IdEnc){
+        $rows=null;
+        $statement=$this->db->prepare('call listarHabitacionesOferta (:IdEnc);');
+        $statement->bindparam(':IdEnc',$IdEnc);
+        $statement->execute();
+        while ($result=$statement->fetch()) {
+            $rows[]=$result;
+        }
+        return $rows; 
+    }
+
+    public function infoHabitacionOferta($IdHab){
+        $rows=null;
+        $statement=$this->db->prepare('select * from habitacion where Id_Habitacion = :IdHab;');
+        $statement->bindparam(':IdHab',$IdHab);
+        $statement->execute();
+        while ($result=$statement->fetch()) {
+            $rows[]=$result;
+        }
+        return $rows; 
+    }
+    public function oferta($IdHab, $CosHab){
+        $rows=null;
+        $statement=$this->db->prepare('update habitacion set Costo_Habitacion = :CosHab where Id_Habitacion = :IdHab');
+        $statement->bindparam(':IdHab',$IdHab);
+        $statement->bindparam(':CosHab',$CosHab);
+        if($statement->execute()){
+            header('Location:../view/EncargadoView/GenerarOfertas.php');
+        }else{
+            header('Location:../view/EncargadoView/Oferta.php');
+        } 
+    }
 }
 ?>
